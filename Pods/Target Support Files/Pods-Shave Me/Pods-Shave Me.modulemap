@@ -1,0 +1,6 @@
+framework module Pods_Shave_Me {
+  umbrella header "Pods-Shave Me-umbrella.h"
+
+  export *
+  module * { export * }
+}

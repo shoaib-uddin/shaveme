@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplitColumnView" customModule="smsarrow" customModuleProvider="target">
+            <connections>
+                <outlet property="firstLabel" destination="qIh-fy-GiU" id="fwa-DJ-GjW"/>
+                <outlet property="secondLabel" destination="w8J-XK-b69" id="h4d-mk-vbb"/>
+                <outlet property="secondServiceView" destination="qee-jp-Flg" id="aNI-g2-MlQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GradientView" customModule="smsarrow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-8M-naF">
+                    <rect key="frame" x="8" y="8" width="234" height="54"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barberdetails_radiobutton" translatesAutoresizingMaskIntoConstraints="NO" id="Fgk-Fy-AB8">
+                            <rect key="frame" x="4" y="4" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Fgk-Fy-AB8" secondAttribute="height" multiplier="1:1" id="nlK-rV-4cs"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIh-fy-GiU">
+                            <rect key="frame" x="54" y="19" width="176" height="16.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Fgk-Fy-AB8" secondAttribute="bottom" constant="4" id="8mk-SA-d9i"/>
+                        <constraint firstItem="Fgk-Fy-AB8" firstAttribute="top" secondItem="t3j-8M-naF" secondAttribute="top" constant="4" id="Pgt-w4-Be8"/>
+                        <constraint firstAttribute="trailing" secondItem="qIh-fy-GiU" secondAttribute="trailing" constant="4" id="asx-Pd-5KR"/>
+                        <constraint firstItem="qIh-fy-GiU" firstAttribute="centerY" secondItem="Fgk-Fy-AB8" secondAttribute="centerY" id="bhp-7s-iKR"/>
+                        <constraint firstItem="Fgk-Fy-AB8" firstAttribute="leading" secondItem="t3j-8M-naF" secondAttribute="leading" constant="4" id="o1N-YE-ij1"/>
+                        <constraint firstItem="qIh-fy-GiU" firstAttribute="leading" secondItem="Fgk-Fy-AB8" secondAttribute="trailing" constant="4" id="zW0-qD-FRp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qee-jp-Flg">
+                    <rect key="frame" x="245" y="8" width="234" height="54"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barberdetails_radiobutton" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-DY-J6W">
+                            <rect key="frame" x="4" y="4" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="aCd-DY-J6W" secondAttribute="height" multiplier="1:1" id="xdi-mE-K7M"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-XK-b69">
+                            <rect key="frame" x="54" y="19" width="176" height="16.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="w8J-XK-b69" firstAttribute="centerY" secondItem="aCd-DY-J6W" secondAttribute="centerY" id="1vE-61-C9d"/>
+                        <constraint firstItem="aCd-DY-J6W" firstAttribute="top" secondItem="qee-jp-Flg" secondAttribute="top" constant="4" id="GIM-qz-hSM"/>
+                        <constraint firstItem="aCd-DY-J6W" firstAttribute="leading" secondItem="qee-jp-Flg" secondAttribute="leading" constant="4" id="KGy-BP-tMr"/>
+                        <constraint firstItem="w8J-XK-b69" firstAttribute="leading" secondItem="aCd-DY-J6W" secondAttribute="trailing" constant="4" id="Q1w-Ta-ObJ"/>
+                        <constraint firstAttribute="trailing" secondItem="w8J-XK-b69" secondAttribute="trailing" constant="4" id="qYT-qf-dLB"/>
+                        <constraint firstAttribute="bottom" secondItem="aCd-DY-J6W" secondAttribute="bottom" constant="4" id="zKQ-cf-soJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qee-jp-Flg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.48" id="1Sa-hh-0Iu"/>
+                <constraint firstItem="t3j-8M-naF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.48" id="4xu-no-jGb"/>
+                <constraint firstAttribute="trailing" secondItem="qee-jp-Flg" secondAttribute="trailing" constant="8" id="MHq-Ub-yHk"/>
+                <constraint firstAttribute="bottom" secondItem="qee-jp-Flg" secondAttribute="bottom" constant="8" id="RSs-HZ-TBR"/>
+                <constraint firstItem="t3j-8M-naF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="hat-hc-1hc"/>
+                <constraint firstItem="qee-jp-Flg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="iem-Jy-t7f"/>
+                <constraint firstItem="t3j-8M-naF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="mCD-eD-RQx"/>
+                <constraint firstAttribute="bottom" secondItem="t3j-8M-naF" secondAttribute="bottom" constant="8" id="pQh-6Z-FWS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.28235294117647058" green="0.33333333333333331" blue="0.37647058823529411" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                    <color key="value" red="0.24705882352941178" green="0.26666666666666666" blue="0.28235294117647058" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                    <color key="value" red="0.2470588235" green="0.2666666667" blue="0.28235294119999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="89.5" y="-245"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="barberdetails_radiobutton" width="11" height="11"/>
+    </resources>
+</document>

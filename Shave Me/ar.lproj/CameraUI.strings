@@ -1,0 +1,17 @@
+/* 
+  CameraUI.strings
+  Shave Me
+
+  Created by NoorAli on 2/16/17.
+  Copyright © 2017 NoorAli. All rights reserved.
+*/
+
+"PHOTO" = "PHOTO";
+"AEAF_LOCK_TEXT" = "AE/AF LOCK";
+"API_CANCEL_TITLE" = "Cancel";
+"HDR_AUTO" = "Auto";
+"HDR_ON" = "On";
+"HDR_OFF" = "Off";
+"RETAKE" = "Retake";
+"USE_PHOTO" = "Use Photo";
+"TIMER_OFF_TEXT" = "Off";

@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "العربية"; ObjectID = "EQG-Ls-Q6M"; */
+"EQG-Ls-Q6M.normalTitle" = "العربية";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Hss-Gv-GUu"; */
+"Hss-Gv-GUu.text" = "9";
+
+/* Class = "UILabel"; text = "Upcoming Appointments"; ObjectID = "LE2-r8-BIe"; */
+"LE2-r8-BIe.text" = "Upcoming Appointments";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Trg-cW-Qaa"; */
+"Trg-cW-Qaa.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "searchByNameAddress"; ObjectID = "XF2-iR-pfl"; */
+"XF2-iR-pfl.placeholder" = "searchByNameAddress";
+
+/* Class = "UILabel"; text = "Today 06-15 PM"; ObjectID = "XZL-xb-pUW"; */
+"XZL-xb-pUW.text" = "Today 06-15 PM";
+
+/* Class = "UILabel"; text = "nearme"; ObjectID = "YCq-4F-Ezp"; */
+"YCq-4F-Ezp.text" = "nearme";
+
+/* Class = "UILabel"; text = "Upcoming Appointments"; ObjectID = "Zyi-Yq-niV"; */
+"Zyi-Yq-niV.text" = "Upcoming Appointments";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "szf-6i-QeC"; */
+"szf-6i-QeC.text" = "Pending";
+
+/* Class = "UILabel"; text = "showallshops"; ObjectID = "wdv-tH-bpV"; */
+"wdv-tH-bpV.text" = "showallshops";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "xcE-UL-GXP"; */
+"xcE-UL-GXP.normalTitle" = "English";

@@ -1,0 +1,22 @@
+/* 
+  PhotoLibrary.strings
+  Shave Me
+
+  Created by NoorAli on 2/16/17.
+  Copyright © 2017 NoorAli. All rights reserved.
+*/
+
+"STREAM_SHARED_BY_ME_SUBTITLE" = "From You";
+"STREAM_SHARED_BY_SUBTITLE" = "From %@";
+"ALBUM_IMAGE_COUNT_FORMAT" = "%@ Photos";
+"ALBUM_VIDEO_COUNT_FORMAT" = "%@ Videos";
+"1_ALBUM_PHOTO" = "1 Photo";
+"1_ALBUM_VIDEO" = "1 Video";
+"ALBUM_TWO_TYPES_LABEL_COMMAS" = "%@, %@";
+"CANCEL" = "Cancel";
+/* Title of button to set contact photo */
+"SET_PHOTO_BUTTON" = "Set Photo";
+
+"CHOOSE_PHOTO_BUTTON" = "Choose";
+
+"USE_PHOTO_BUTTON" = "Use Photo";

@@ -1,0 +1,75 @@
+/*
+ PhotoLibraryServices.strings
+ MobileSlideShow
+ 
+ Created by Hernan Eguiluz on 4/20/11.
+ Copyright 2011 Apple, Inc. All rights reserved.
+ */
+
+/* Error string for when image encoding fails */
+"ENCODING_FAILED" = "Failed to encode image for saved photos.";
+
+"VIDEO_DISK_SPACE_ERROR" = "Operation failed because there is insufficient free disk space to copy video file.";
+"VIDEO_UNKNOWN_ERROR" = "Unknown error occurred while adding video to saved photos.";
+"VIDEO_INVALID_ERROR" = "Operation failed because video file is invalid and cannot be played.";
+
+/* Strings used when telling the user that Photos needs to be launched in order for it to rebuild its database */
+"ERROR_DATABASE_CORRUPT_HEADER" = "There is a problem with the Photos library.";
+"ERROR_DATABASE_CORRUPT_MESSAGE" = "Please launch Photos to fix it.";
+"ERROR_DATABASE_CORRUPT_DISMISS" = "Dismiss";
+
+"CORE_LOC_PURPOSE" = "Photos will be tagged with the location where they were taken.";
+"CORE_LOC_PURPOSE_VIDEO" = "Photos and videos will be tagged with the location where they were taken.";
+
+/* Errors for saving assets through public API.  These strings are used for both AssetsLibrary and UIKit */
+"ERROR_UNKNOWN_DESCRIPTION" = "Unknown error";
+
+"ERROR_WRITE_FAILED_DESCRIPTION" = "Write failed";
+"ERROR_WRITE_FAILED_FAILURE" = "There was a problem writing this asset because the write failed.";
+
+"ERROR_ACCESS_USER_DENIED_DESCRIPTION" = "User denied access";
+"ERROR_ACCESS_USER_DENIED_FAILURE" = "The user has denied the application access to their media.";
+
+"ERROR_ACCESS_GLOBAL_DENIED_DESCRIPTION" = "Global denied access";
+"ERROR_ACCESS_GLOBAL_DENIED_FAILURE" = "The user has denied all applications access to their media.";
+"ERROR_ACCESS_GLOBAL_DENIED_RECOVERY" = "This setting can be changed in Preferences.";
+
+"ERROR_WRITE_BUSY_DESCRIPTION" = "Write busy";
+"ERROR_WRITE_BUSY_FAILURE" = "There was a problem writing this asset because the writing resources are busy.";
+"ERROR_WRITE_BUSY_RECOVERY" = "Try to write again";
+
+"ERROR_WRITE_INVALID_DATA_DESCRIPTION" = "Invalid data";
+"ERROR_WRITE_INVALID_DATA_FAILURE" = "There was a problem writing this asset because the data is invalid and cannot be viewed or played.";
+"ERROR_WRITE_INVALID_DATA_RECOVERY" = "Try with different data";
+
+"ERROR_WRITE_INCOMPATIBLE" = "This asset is incompatible with this device's saved photos roll.";
+
+/* Error string for when image encoding fails */
+"ERROR_WRITE_ENCODING_FAILED" = "Failed to encode image for saved photos.";
+
+"ERROR_WRITE_DISK_SPACE" = "There is insufficient free disk space to copy asset file.";
+
+"ERROR_DATA_UNAVAILABLE_DESCRIPTION" = "Data unavailable";
+"ERROR_DATA_UNAVAILABLE_RECOVERY" = "Launch the Photos application";
+
+
+/* Photos item */
+"PHOTOS" = "Photos";
+
+/* Library item title */
+"PHOTO_LIBRARY" = "Photo Library";
+
+/* Camera item title */
+"CAMERA_ROLL" = "Camera Roll";
+
+/* Camera roll label on devices lacking a camera */
+"SAVED_PHOTOS" = "Saved Photos";
+
+/* Title for the Last Import smart album */
+"LAST_IMPORT" = "Last Import";
+
+/* Title for the All Imported smart album */
+"ALL_IMPORTED" = "All Imported";
+
+/* EXIF TIFF Model */
+"TIFFMAKE" = "Apple";

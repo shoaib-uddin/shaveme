@@ -1,0 +1,162 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
+  - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - AlamofireNetworkActivityIndicator (2.1.0):
+    - Alamofire (~> 4.1)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - BadgeSwift (4.0.0)
+  - ESPullToRefresh (2.6)
+  - Firebase/Core (3.14.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.1)
+  - Firebase/Crash (3.14.0):
+    - Firebase/Core
+    - FirebaseCrash (= 1.1.6)
+  - Firebase/DynamicLinks (3.14.0):
+    - Firebase/Core
+    - FirebaseDynamicLinks (= 1.3.3)
+  - Firebase/Messaging (3.14.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 1.2.2)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.5.1):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCrash (1.1.6):
+    - FirebaseAnalytics (~> 3.7)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - Protobuf (~> 3.1)
+  - FirebaseDynamicLinks (1.3.3):
+    - FirebaseAnalytics (~> 3.7)
+  - FirebaseInstanceID (1.0.9)
+  - FirebaseMessaging (1.2.2):
+    - FirebaseAnalytics (~> 3.7)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - FSCalendar (2.7.2)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.2.0):
+    - GoogleMaps (= 2.2.0)
+    - GooglePlaces (= 2.2.0)
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/Logger (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - HCSStarRatingView (1.4.5)
+  - ImageSlideshow (1.1.0):
+    - ImageSlideshow/Core (= 1.1.0)
+  - ImageSlideshow/Alamofire (1.1.0):
+    - AlamofireImage (~> 3.0)
+    - ImageSlideshow/Core
+  - ImageSlideshow/Core (1.1.0)
+  - KMPlaceholderTextView (1.3.0)
+  - M13Checkbox (3.1.3)
+  - MZAppearance (1.1.6)
+  - MZFormSheetPresentationController (2.4.2):
+    - MZAppearance
+  - ObjectMapper (2.2.5)
+  - Protobuf (3.2.0)
+  - ReachabilitySwift (3)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
+  - SearchTextField (1.0.7)
+  - SWRevealViewController (2.3.0)
+  - TTRangeSlider (1.0.5)
+  - UIView+FDCollapsibleConstraints (1.1)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.2)
+  - Alamofire (~> 4.2)
+  - AlamofireImage (~> 3.2)
+  - AlamofireNetworkActivityIndicator (~> 2.1)
+  - AlamofireObjectMapper (~> 4.0)
+  - BadgeSwift (~> 4.0)
+  - ESPullToRefresh (~> 2.2)
+  - Firebase/Core
+  - Firebase/Crash
+  - Firebase/DynamicLinks
+  - Firebase/Messaging
+  - FSCalendar (from `https://github.com/WenchaoD/FSCalendar.git`)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - HCSStarRatingView (~> 1.4)
+  - ImageSlideshow (~> 1.0)
+  - ImageSlideshow/Alamofire
+  - KMPlaceholderTextView (~> 1.3)
+  - M13Checkbox (~> 3.1)
+  - MZFormSheetPresentationController (~> 2.4)
+  - ReachabilitySwift (~> 3)
+  - RealmSwift (~> 2.8.1)
+  - SearchTextField (~> 1.0)
+  - SWRevealViewController (~> 2.3)
+  - TTRangeSlider (~> 1.0)
+  - UIView+FDCollapsibleConstraints (~> 1.1)
+
+EXTERNAL SOURCES:
+  FSCalendar:
+    :git: https://github.com/WenchaoD/FSCalendar.git
+
+CHECKOUT OPTIONS:
+  FSCalendar:
+    :commit: 3a76fa968a1388de3d4c414ccf881bad4cf4c952
+    :git: https://github.com/WenchaoD/FSCalendar.git
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  BadgeSwift: b291cf8ca88674d61cd781f14988272988f4dff4
+  ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
+  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
+  FirebaseCrash: db4c05d9c75baa050744d31b36357c8f1efba481
+  FirebaseDynamicLinks: f0d025dd29a1d70418c003344813b67ab748ffb9
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  FirebaseMessaging: df8267f378580a24174ce7861233aa11d5c90109
+  FSCalendar: 6200ef796dfe85005ff2fb19bbd429f8be742f86
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
+  KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
+  M13Checkbox: c132a7e0eb964731855eff67b883a0b21b7c0977
+  MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
+  MZFormSheetPresentationController: c1dc3bce639d2393b3cc416fcb6e050eb5bca062
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
+  SearchTextField: 0ac05920547702261faa2a427bc4add64cefab57
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  TTRangeSlider: 2f2ce4a33b32bb323c6575b9f5161c4664459c58
+  UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
+
+PODFILE CHECKSUM: 44a3fd4d3e24746b80b42241bc13d48a667530f5
+
+COCOAPODS: 1.3.1
