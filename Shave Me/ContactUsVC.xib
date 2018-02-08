@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactUsVC" customModule="Shave_Me" customModuleProvider="target">
             <connections>
@@ -28,11 +33,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="hAa-7A-mpa">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0T-qQ-Nx4" userLabel="MainContentView">
-                    <rect key="frame" x="0.0" y="24" width="375" height="643"/>
+                    <rect key="frame" x="0.0" y="36" width="375" height="631"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84g-zb-ZGv">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="643"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="631"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYd-eD-Edw" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="491"/>
@@ -47,7 +55,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="dd8-9k-OZq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00971504874606" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-p1-ldQ" userLabel="phoneNumber">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+971-563114476" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-p1-ldQ" userLabel="phoneNumber">
                                                     <rect key="frame" x="38" y="8" width="289" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="A5m-jY-s2h"/>
@@ -321,15 +329,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="hAa-7A-mpa" firstAttribute="centerX" secondItem="act-gh-jKp" secondAttribute="centerX" id="0cS-PW-bCi"/>
+                <constraint firstItem="hAa-7A-mpa" firstAttribute="width" secondItem="act-gh-jKp" secondAttribute="width" id="AL7-2C-8WB"/>
                 <constraint firstItem="T0T-qQ-Nx4" firstAttribute="leading" secondItem="act-gh-jKp" secondAttribute="leading" id="GmJ-lf-knj"/>
                 <constraint firstAttribute="bottom" secondItem="T0T-qQ-Nx4" secondAttribute="bottom" id="HSY-hW-mfV"/>
                 <constraint firstAttribute="trailing" secondItem="T0T-qQ-Nx4" secondAttribute="trailing" id="NGp-2h-57z"/>
                 <constraint firstItem="T0T-qQ-Nx4" firstAttribute="top" secondItem="act-gh-jKp" secondAttribute="topMargin" constant="16" id="Wwr-hm-OTA"/>
+                <constraint firstItem="hAa-7A-mpa" firstAttribute="height" secondItem="act-gh-jKp" secondAttribute="height" id="fdX-rf-wyX"/>
+                <constraint firstItem="hAa-7A-mpa" firstAttribute="centerY" secondItem="act-gh-jKp" secondAttribute="centerY" id="pAW-qT-gNH"/>
             </constraints>
             <point key="canvasLocation" x="-225.5" y="40.5"/>
         </view>
     </objects>
     <resources>
+        <image name="bg" width="865" height="506"/>
         <image name="msgicon" width="128" height="128"/>
         <image name="phoneicon" width="128" height="128"/>
     </resources>

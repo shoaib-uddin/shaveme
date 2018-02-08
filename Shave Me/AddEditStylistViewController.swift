@@ -40,7 +40,7 @@ class AddEditStylistViewController: BaseSideMenuViewController, UIImagePickerCon
         self.hideKeyboardOnTap()
         
         self.fullNameTextField.delegate = self
-        timingsView.viewController = self
+        timingsView._viewController = self
         
         if let model = addOrUpdateStylistModel {
             isUpdating = true

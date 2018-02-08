@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-qr-8da">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBb-bW-xgO" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
@@ -33,22 +36,22 @@
                                 <segment title="month"/>
                                 <segment title="list"/>
                             </segments>
-                            <color key="tintColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onSegmentValueChange:" destination="-1" eventType="valueChanged" id="I5K-j4-nLJ"/>
                             </connections>
                         </segmentedControl>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TV-DC-tDY" customClass="FSCalendar">
                             <rect key="frame" x="16" y="46" width="343" height="605"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="tintColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitContentSize" value="YES"/>
                                 <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                    <color key="value" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                    <color key="value" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
                                     <color key="value" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,10 +59,10 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
                                 <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                    <color key="value" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
-                                    <color key="value" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
@@ -69,14 +72,14 @@
                         </view>
                         <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIa-iF-lhJ">
                             <rect key="frame" x="16" y="46" width="343" height="605"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="gKI-ln-jHs"/>
                                 <outlet property="delegate" destination="-1" id="HpO-er-gz3"/>
                             </connections>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottomMargin" secondItem="1TV-DC-tDY" secondAttribute="bottom" constant="8" id="5aL-8j-zrR"/>
                         <constraint firstAttribute="trailing" secondItem="8LU-1b-Vef" secondAttribute="trailing" constant="20" id="CXj-JU-CWo"/>
@@ -95,11 +98,18 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mBb-bW-xgO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E5t-OI-nVR"/>
+                <constraint firstItem="VmH-qr-8da" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FYX-k8-BqQ"/>
                 <constraint firstAttribute="trailing" secondItem="mBb-bW-xgO" secondAttribute="trailing" id="Oqh-uO-PRn"/>
                 <constraint firstItem="mBb-bW-xgO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ukg-oy-07E"/>
+                <constraint firstItem="VmH-qr-8da" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YWC-QJ-QYl"/>
+                <constraint firstItem="VmH-qr-8da" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="lhS-Ej-NcJ"/>
                 <constraint firstAttribute="bottom" secondItem="mBb-bW-xgO" secondAttribute="bottom" id="md4-z7-Nlf"/>
+                <constraint firstItem="VmH-qr-8da" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ygP-LJ-W6L"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg" width="865" height="506"/>
+    </resources>
 </document>

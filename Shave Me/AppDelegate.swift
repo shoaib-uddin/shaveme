@@ -12,6 +12,7 @@ import GoogleMaps
 import GooglePlaces
 
 import UserNotifications
+import IQKeyboardManagerSwift;
 
 import Firebase
 import FirebaseInstanceID
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Set deepLinkURLScheme to the custom URL scheme you defined in your
         // Xcode project.
+        IQKeyboardManager.sharedManager().enable = true;
         FIROptions.default().deepLinkURLScheme = Bundle.main.bundleIdentifier
         
         NetworkActivityIndicatorManager.shared.isEnabled = true

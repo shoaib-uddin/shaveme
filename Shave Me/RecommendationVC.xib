@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendationVC" customModule="Shave_Me" customModuleProvider="target">
             <connections>
@@ -30,11 +35,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" highlightedImage="x" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-MG-4Q1">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-eO-1oE" userLabel="MainContentView">
-                    <rect key="frame" x="0.0" y="24" width="375" height="643"/>
+                    <rect key="frame" x="0.0" y="36" width="375" height="631"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehI-fL-1Ee">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="643"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="631"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqv-sT-tWD" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
@@ -303,11 +311,19 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="FvA-eO-1oE" secondAttribute="trailing" id="8K5-Mo-Ffu"/>
+                <constraint firstItem="YUf-MG-4Q1" firstAttribute="height" secondItem="3I8-Mf-015" secondAttribute="height" id="G41-R0-l0n"/>
+                <constraint firstItem="YUf-MG-4Q1" firstAttribute="width" secondItem="3I8-Mf-015" secondAttribute="width" id="T8B-O8-qeA"/>
                 <constraint firstAttribute="bottom" secondItem="FvA-eO-1oE" secondAttribute="bottom" id="WaW-Zp-Zag"/>
+                <constraint firstItem="YUf-MG-4Q1" firstAttribute="centerY" secondItem="3I8-Mf-015" secondAttribute="centerY" id="te2-5U-M1A"/>
                 <constraint firstItem="FvA-eO-1oE" firstAttribute="leading" secondItem="3I8-Mf-015" secondAttribute="leading" id="u7a-ie-DV3"/>
                 <constraint firstItem="FvA-eO-1oE" firstAttribute="top" secondItem="3I8-Mf-015" secondAttribute="topMargin" constant="16" id="uY8-CQ-xrH"/>
+                <constraint firstItem="YUf-MG-4Q1" firstAttribute="centerX" secondItem="3I8-Mf-015" secondAttribute="centerX" id="v4X-WR-zVC"/>
             </constraints>
             <point key="canvasLocation" x="-225.5" y="40.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg" width="865" height="506"/>
+        <image name="x" width="16" height="16"/>
+    </resources>
 </document>

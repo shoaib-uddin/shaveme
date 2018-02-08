@@ -76,7 +76,7 @@ class UpdateShopDetailsVC: BaseSideMenuViewController, UIImagePickerControllerDe
                     
                     self.updateShopModel = UpdateShopModel(object: barberModel)
                     
-                    timingsView.viewController = self
+                    timingsView._viewController = self
                     
                     if self.updateShopModel?.Availability == nil {
                        self.updateShopModel?.Availability? = []
@@ -93,7 +93,7 @@ class UpdateShopDetailsVC: BaseSideMenuViewController, UIImagePickerControllerDe
                     
                     self.updateShopModel = UpdateShopModel(object: barberModel)
                     
-                    timingsView.viewController = self
+                    timingsView._viewController = self
                     
                     if self.updateShopModel?.Availability == nil {
                         self.updateShopModel?.Availability? = []

@@ -218,7 +218,8 @@ class MapSearchVC: BaseSideMenuViewController, UITextFieldDelegate, GMSMapViewDe
             } else {
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                marker.icon = #imageLiteral(resourceName: "user_location")
+                //marker.icon = #imageLiteral(resourceName: "user_location")
+                marker.icon = #imageLiteral(resourceName: "shop_location_featured")
                 marker.title = "current_location".localized()
                 marker.snippet = "current_location".localized()
                 marker.map = mapView

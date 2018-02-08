@@ -16,7 +16,7 @@ class TimingView: UIView, ViewControllerInterationProtocol {
     
     @IBOutlet weak var sameTimingCheckbox: M13Checkbox!
     
-    weak var viewController: UIViewController!
+    weak var _viewController: UIViewController!
     var originalAvailabilityModel = [AvailabilityModel]()
     
     // MARK: - Life Cycle Methods
@@ -58,7 +58,7 @@ class TimingView: UIView, ViewControllerInterationProtocol {
                 controller.model = model
                 controller.delegate = self
                 controller.mTitle = TimingView.WEEK_ARRAY[position - 1]
-                AppUtils.addViewControllerModally(originVC: viewController, destinationVC: controller, widthMultiplier: 0.95, HeightMultiplier: 0.6)
+                AppUtils.addViewControllerModally(originVC: _viewController, destinationVC: controller, widthMultiplier: 0.95, HeightMultiplier: 0.6)
             } else {
                 showTimingSelector(position: position)
             }
@@ -83,7 +83,7 @@ class TimingView: UIView, ViewControllerInterationProtocol {
                 
                 alert.addAction(UIAlertAction(title: "no".localized(), style: .default, handler: nil))
                 
-                viewController.present(alert, animated: true, completion: nil)
+                _viewController.present(alert, animated: true, completion: nil)
             } else {
                 showTimingSelector(position: position)
             }
@@ -111,7 +111,7 @@ class TimingView: UIView, ViewControllerInterationProtocol {
             
             alert.addAction(UIAlertAction(title: "no".localized(), style: .default, handler: nil))
             
-            viewController.present(alert, animated: true, completion: nil)
+            _viewController.present(alert, animated: true, completion: nil)
         } else {
             self.sameTimingCheckbox.checkState = .unchecked
         }
@@ -139,7 +139,7 @@ class TimingView: UIView, ViewControllerInterationProtocol {
             controller.delegate = self
             controller.model = model
             controller.mTitle = TimingView.WEEK_ARRAY[position - 1]
-            AppUtils.addViewControllerModally(originVC: viewController, destinationVC: controller, widthMultiplier: 0.95, HeightMultiplier: 0.6)
+            AppUtils.addViewControllerModally(originVC: _viewController, destinationVC: controller, widthMultiplier: 0.95, HeightMultiplier: 0.6)
         } else {
             originalAvailabilityModel.append(model)
             loadTimingsView()

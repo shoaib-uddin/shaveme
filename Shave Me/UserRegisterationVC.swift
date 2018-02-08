@@ -131,8 +131,9 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
         }
         
         if let image = image {
-            let scaledImage = image.resizeImage(newWidth: 1200)
-            self.profilePictureBase64String = scaledImage?.base64EncodedString()
+            //let scaledImage = image.resizeImage(newWidth: 1200)
+            let scaledImage = image;
+            self.profilePictureBase64String = scaledImage.base64EncodedString()
             
             self.profileImageView.image = scaledImage
         } else {

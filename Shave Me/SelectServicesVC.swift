@@ -26,7 +26,9 @@ class SelectServicesVC: MirroringViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentListItems = originalListItems
+        currentListItems = originalListItems.sorted(by: { (a, b) -> Bool in
+            return a.name < b.name;
+        })
         
         // Changing navigation bar color
         if let navigationController = self.navigationController {

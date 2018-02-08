@@ -15,10 +15,10 @@ import ObjectMapper
 class AdvancedSearchVC: BaseSideMenuViewController, UITextFieldDelegate, ViewControllerInterationProtocol {
 
     private static let FROM_COST: Float = 0
-    private static let TO_COST: Float = 500
+    private static let TO_COST: Float = 5000
     
     private static let FROM_DISTANCE: Float = 0
-    private static let TO_DISTANCE: Float = 25
+    private static let TO_DISTANCE: Float = 100
     
     @IBOutlet weak var topLayoutConstraint: NSLayoutConstraint!
     

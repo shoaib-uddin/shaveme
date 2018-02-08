@@ -33,5 +33,6 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Crash'
 pod 'ReachabilitySwift', '~> 3'
 pod 'Firebase/DynamicLinks'
+pod 'IQKeyboardManagerSwift'
 
 end

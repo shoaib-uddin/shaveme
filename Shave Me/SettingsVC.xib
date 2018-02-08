@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC" customModule="Shave_Me" customModuleProvider="target">
             <connections>
@@ -25,11 +30,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-QB-nff">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tA-Zl-Jon" userLabel="MainContentView">
-                    <rect key="frame" x="0.0" y="24" width="375" height="643"/>
+                    <rect key="frame" x="0.0" y="36" width="375" height="631"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlP-vM-0Vk">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="643"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="631"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-dt-jlA" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
@@ -274,10 +282,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="5jH-QB-nff" firstAttribute="width" secondItem="7sT-Cq-nXk" secondAttribute="width" id="IQe-Gp-uaz"/>
                 <constraint firstAttribute="trailing" secondItem="4tA-Zl-Jon" secondAttribute="trailing" id="LOz-it-rkF"/>
+                <constraint firstItem="5jH-QB-nff" firstAttribute="height" secondItem="7sT-Cq-nXk" secondAttribute="height" id="O3o-LI-lNG"/>
                 <constraint firstItem="4tA-Zl-Jon" firstAttribute="leading" secondItem="7sT-Cq-nXk" secondAttribute="leading" id="OtT-Vm-WhU"/>
                 <constraint firstAttribute="bottom" secondItem="4tA-Zl-Jon" secondAttribute="bottom" id="VC2-s2-4vh"/>
+                <constraint firstItem="5jH-QB-nff" firstAttribute="centerY" secondItem="7sT-Cq-nXk" secondAttribute="centerY" id="XHp-Tx-wO0"/>
                 <constraint firstItem="4tA-Zl-Jon" firstAttribute="top" secondItem="7sT-Cq-nXk" secondAttribute="topMargin" constant="16" id="r76-IU-27Z"/>
+                <constraint firstItem="5jH-QB-nff" firstAttribute="centerX" secondItem="7sT-Cq-nXk" secondAttribute="centerX" id="wfQ-44-rK6"/>
             </constraints>
             <point key="canvasLocation" x="-225.5" y="40.5"/>
         </view>
@@ -297,4 +309,7 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="bg" width="865" height="506"/>
+    </resources>
 </document>
