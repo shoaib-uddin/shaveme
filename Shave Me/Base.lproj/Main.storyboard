@@ -1501,7 +1501,7 @@
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-Qd-akc" customClass="M13Checkbox" customModule="M13Checkbox">
                                         <rect key="frame" x="0.0" y="6" width="25" height="18"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="QfH-7c-bPw"/>
@@ -1532,11 +1532,11 @@
                                         <rect key="frame" x="33" y="0.0" width="78" height="30"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="iC0-Qd-akc" firstAttribute="top" secondItem="Zsq-4v-7gg" secondAttribute="top" constant="6" id="2XT-1p-X7F"/>
@@ -1581,6 +1581,13 @@
                                     <action selector="onClickNewUser:" destination="p2m-dR-hqU" eventType="touchUpInside" id="gQp-UZ-WhL"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6z-Ml-RL1">
+                                <rect key="frame" x="60" y="332" width="200" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AS2-gn-JH6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1600,10 +1607,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dZb-u8-gDq" secondAttribute="trailing" id="Xat-U2-Yai"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HNi-v9-wfz" secondAttribute="trailing" id="k4n-Kd-PWD"/>
                             <constraint firstItem="dZb-u8-gDq" firstAttribute="top" secondItem="2AJ-ZV-AZc" secondAttribute="bottom" constant="8" id="lws-iO-2jd"/>
+                            <constraint firstItem="L6z-Ml-RL1" firstAttribute="height" secondItem="Zpg-Mb-gA3" secondAttribute="height" multiplier="2" id="qdP-Ys-5DJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2AJ-ZV-AZc" secondAttribute="trailing" id="u7p-Oe-eT1"/>
                             <constraint firstItem="6hA-Nt-fLB" firstAttribute="width" secondItem="GfQ-jf-yfJ" secondAttribute="width" id="uiU-km-RbI"/>
                             <constraint firstItem="Zpg-Mb-gA3" firstAttribute="top" secondItem="kRW-yD-Wq0" secondAttribute="bottom" constant="20" id="wHR-3E-McL"/>
                             <constraint firstItem="kRW-yD-Wq0" firstAttribute="leading" secondItem="GfQ-jf-yfJ" secondAttribute="leadingMargin" id="xar-76-nPg"/>
+                            <constraint firstItem="L6z-Ml-RL1" firstAttribute="centerX" secondItem="Zpg-Mb-gA3" secondAttribute="centerX" id="xgE-uf-0wh"/>
+                            <constraint firstItem="L6z-Ml-RL1" firstAttribute="top" secondItem="Zpg-Mb-gA3" secondAttribute="bottom" constant="12" id="xtT-cT-CO0"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -1611,6 +1621,7 @@
                         <outlet property="emailTextField" destination="rHN-Sz-cpR" id="IgR-Vb-f13"/>
                         <outlet property="passwordTextField" destination="e1p-aP-pYW" id="udf-YL-Se5"/>
                         <outlet property="rememberMeCheckBox" destination="iC0-Qd-akc" id="Xsk-pQ-3PO"/>
+                        <outlet property="socialView" destination="L6z-Ml-RL1" id="x1u-Yf-a5D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBn-70-C0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2243,7 +2254,7 @@
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8Z-Ax-3WU" customClass="M13Checkbox" customModule="M13Checkbox">
                                         <rect key="frame" x="0.0" y="6" width="25" height="18"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="RjW-Cx-07G"/>
@@ -2274,11 +2285,11 @@
                                         <rect key="frame" x="33" y="0.0" width="78" height="30"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="X8Z-Ax-3WU" firstAttribute="top" secondItem="1zI-jP-ASu" secondAttribute="top" constant="6" id="Alj-XH-4PM"/>

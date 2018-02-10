@@ -24,13 +24,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.shavemearabia.app</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.shavemearabia.app</string>
+                <string>twitterkit-r0aCtsrQ9MMplAyT8BXJh3bXB</string>
+				<string>fb2021472911407848</string>
 			</array>
 		</dict>
 	</array>
@@ -40,8 +37,15 @@
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+        <string>twitter</string>
+        <string>twitterauth</string>
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+        
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -68,6 +72,10 @@
 		<string>GE_Dinar_One_Medium.otf</string>
 		<string>GE_Dinar_One_Light.otf</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>2021472911407848</string>
+	<key>FacebookDisplayName</key>
+	<string>shaveme</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

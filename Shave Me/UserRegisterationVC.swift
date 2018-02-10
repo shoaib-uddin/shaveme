@@ -34,7 +34,7 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
     @IBOutlet weak var termsOfServiceLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     
-    private var selectedGenderValue: String?
+    private var selectedGenderValue: String? = "Male";
     private var selectedNationalityValue: String?
     private var selectedEmirateValue: String?
     private var profilePictureBase64String: String?

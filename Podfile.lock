@@ -9,7 +9,35 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
   - BadgeSwift (4.0.0)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - ESPullToRefresh (2.6)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FacebookShare (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKShareKit (~> 4.27)
+  - FBSDKCoreKit (4.30.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.30.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.30.0):
+    - FBSDKCoreKit (~> 4.30.0)
+  - Firebase/Auth (3.14.0):
+    - Firebase/Core
+    - FirebaseAuth (= 3.1.1)
   - Firebase/Core (3.14.0):
     - FirebaseAnalytics (= 3.7.0)
     - FirebaseCore (= 3.5.1)
@@ -26,6 +54,10 @@ PODS:
     - FirebaseCore (~> 3.5)
     - FirebaseInstanceID (~> 1.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseAuth (3.1.1):
+    - FirebaseAnalytics (~> 3.7)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (3.5.1):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseCrash (1.1.6):
@@ -53,11 +85,19 @@ PODS:
     - GooglePlaces (= 2.2.0)
   - GooglePlaces (2.2.0):
     - GoogleMaps/Base (= 2.2.0)
+  - GoogleToolboxForMac/DebugUtils (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/Logger (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.1):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.1)
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
+  - GTMSessionFetcher/Core (1.1.12)
   - HCSStarRatingView (1.4.5)
   - ImageSlideshow (1.1.0):
     - ImageSlideshow/Core (= 1.1.0)
@@ -82,6 +122,9 @@ PODS:
   - SearchTextField (1.0.7)
   - SWRevealViewController (2.3.0)
   - TTRangeSlider (1.0.5)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
   - UIView+FDCollapsibleConstraints (1.1)
 
 DEPENDENCIES:
@@ -92,6 +135,10 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - BadgeSwift (~> 4.0)
   - ESPullToRefresh (~> 2.2)
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
+  - Firebase/Auth
   - Firebase/Core
   - Firebase/Crash
   - Firebase/DynamicLinks
@@ -112,6 +159,7 @@ DEPENDENCIES:
   - SearchTextField (~> 1.0)
   - SWRevealViewController (~> 2.3)
   - TTRangeSlider (~> 1.0)
+  - TwitterKit (~> 3.0)
   - UIView+FDCollapsibleConstraints (~> 1.1)
 
 EXTERNAL SOURCES:
@@ -130,9 +178,17 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   BadgeSwift: b291cf8ca88674d61cd781f14988272988f4dff4
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
+  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
+  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
+  FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
   FirebaseCrash: db4c05d9c75baa050744d31b36357c8f1efba481
   FirebaseDynamicLinks: f0d025dd29a1d70418c003344813b67ab748ffb9
@@ -143,6 +199,7 @@ SPEC CHECKSUMS:
   GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
   ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
@@ -158,8 +215,10 @@ SPEC CHECKSUMS:
   SearchTextField: 0ac05920547702261faa2a427bc4add64cefab57
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   TTRangeSlider: 2f2ce4a33b32bb323c6575b9f5161c4664459c58
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
 
-PODFILE CHECKSUM: 11d7915225ab535e347b9c14fd047d213772b2e9
+PODFILE CHECKSUM: 403150580f659489b1147bf00c9940c1beaedd64
 
 COCOAPODS: 1.3.1

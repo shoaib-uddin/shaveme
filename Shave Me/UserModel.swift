@@ -14,7 +14,6 @@ class UserModel: Mappable {
     var firstName = ""
     var lastName = ""
     var password = ""
-    var gender = ""
     var mobileNo: String?
     var email = ""
     var language = ""
@@ -37,7 +36,6 @@ class UserModel: Mappable {
         self.firstName = firstName
         self.lastName = lastName
         self.password = password
-        self.gender = gender
         self.email = email
         self.language = language
         self.nationality = nationality
@@ -54,7 +52,6 @@ class UserModel: Mappable {
         firstName <- map["firstName"]
         lastName <- map["lastName"]
         password <- map["password"]
-        gender <- map["gender"]
         mobileNo <- map["mobileNo"]
         email <- map["email"]
         language <- map["language"]

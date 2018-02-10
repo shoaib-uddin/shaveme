@@ -50,7 +50,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
             emailTextField.text = user.email
             mobileTextField.text = user.mobileNo
             
-            genderLabel.text = user.gender
+            
             nationalityLabel.text = user.nationality
             emiratesLabel.text = user.emirates
             
@@ -194,7 +194,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
             userModel.firstName = firstName
             userModel.lastName = lastName
             userModel.mobileNo = mobileTextField.text
-            userModel.gender = gender
+            
             userModel.nationality = nationality
             userModel.emirates = emirate
             userModel.profilePic = profilePictureBase64String

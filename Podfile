@@ -34,5 +34,6 @@ pod 'Firebase/Crash'
 pod 'ReachabilitySwift', '~> 3'
 pod 'Firebase/DynamicLinks'
 pod 'IQKeyboardManagerSwift'
+pod 'TwitterKit' , '~>3.0'
 
 end

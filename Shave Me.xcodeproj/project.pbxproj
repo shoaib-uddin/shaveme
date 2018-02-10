@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A312079202F0B9A000AEFF3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A312078202F0B9A000AEFF3 /* SafariServices.framework */; };
+		0A31207B202F3149000AEFF3 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */; };
+		0A31207F202F4349000AEFF3 /* GBHFacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */; };
 		4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */; };
 		6809B7D61E3DC3F1004768A8 /* ManageBarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */; };
 		6809B7D81E3DD0D0004768A8 /* ManageBarberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */; };
@@ -176,6 +179,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A312078202F0B9A000AEFF3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
+		0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHFacebookHelper.swift; sourceTree = "<group>"; };
 		6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberVC.swift; sourceTree = "<group>"; };
 		6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberModel.swift; sourceTree = "<group>"; };
 		6809B7DA1E3E0A6A004768A8 /* AddEditStylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditStylistViewController.swift; sourceTree = "<group>"; };
@@ -362,6 +368,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A312079202F0B9A000AEFF3 /* SafariServices.framework in Frameworks */,
 				687770B51E4C9756007135F1 /* SystemConfiguration.framework in Frameworks */,
 				4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */,
 			);
@@ -842,6 +849,8 @@
 				68BB0DFD1E07DBC800ED2310 /* ExtendedClasses.swift */,
 				68EBBDC81E0BA2E30035C472 /* MyDatabase.swift */,
 				68D9252E1E2CDF850069735F /* MyFonts.swift */,
+				0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */,
+				0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -869,6 +878,7 @@
 		78E484FA57F65C680F43887A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A312078202F0B9A000AEFF3 /* SafariServices.framework */,
 				687770B41E4C9756007135F1 /* SystemConfiguration.framework */,
 				6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */,
 			);
@@ -1060,8 +1070,16 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/BadgeSwift/BadgeSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1078,6 +1096,8 @@
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+FDCollapsibleConstraints/UIView_FDCollapsibleConstraints.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1088,8 +1108,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCSStarRatingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1106,6 +1134,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_FDCollapsibleConstraints.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,6 +1153,8 @@
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -1205,6 +1237,7 @@
 				683B8A881E225AB900FB4753 /* ContactUsVC.swift in Sources */,
 				68166A461E66F3800099A2E0 /* MyDynamicLinksController.swift in Sources */,
 				68773E8D1E34823700721704 /* FeaturingRequestVC.swift in Sources */,
+				0A31207F202F4349000AEFF3 /* GBHFacebookHelper.swift in Sources */,
 				687770A61E41D280007135F1 /* RateUserVC.swift in Sources */,
 				6834C8A91E3733200037F814 /* TimingView.swift in Sources */,
 				683B8A811E222E4200FB4753 /* RecommendationVC.swift in Sources */,
@@ -1239,6 +1272,7 @@
 				683B8A841E22536400FB4753 /* RecommendationModel.swift in Sources */,
 				683B8A8B1E22676700FB4753 /* FeedbackModel.swift in Sources */,
 				68DAAB331E0905C200E6E2ED /* BarberShopListingsVC.swift in Sources */,
+				0A31207B202F3149000AEFF3 /* FacebookLoginHelper.swift in Sources */,
 				68773E901E3482CD00721704 /* FeaturingRequestModel.swift in Sources */,
 				68BFC0CC1E1BCD4C00C2E564 /* FeaturedShopListingsVC.swift in Sources */,
 				68DCBB9D1DFE9B4F004F9800 /* HomeBannerModel.swift in Sources */,
@@ -1431,6 +1465,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5P89N5UC95;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Shave Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shavemearabia.app;
@@ -1451,6 +1486,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5P89N5UC95;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Shave Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shavemearabia.app;

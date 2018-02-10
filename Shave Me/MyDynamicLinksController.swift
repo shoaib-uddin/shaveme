@@ -10,6 +10,8 @@ import UIKit
 import FirebaseDynamicLinks
 import SWRevealViewController
 import Alamofire
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 extension AppDelegate {
     
@@ -22,37 +24,41 @@ extension AppDelegate {
     // MARK: - Deep Dynamic Linking
     
     // [START openurl]
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        return application(app, open: url, sourceApplication: nil, annotation: [:])
-    }
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        let dynamicLink = FIRDynamicLinks.dynamicLinks()?.dynamicLink(fromCustomSchemeURL: url)
-        if let dynamicLink = dynamicLink {
-            // Handle the deep link. For example, show the deep-linked content or
-            // apply a promotional offer to the user's account.
-            // [START_EXCLUDE]
-            // In this sample, we just open an alert.
-            //            let message = generateDynamicLinkMessage(dynamicLink)
-            if #available(iOS 8.0, *) {
-                parseAndShowShop(url: dynamicLink.url)
-            } else {
-                // Fallback on earlier versions
-            }
-            // [END_EXCLUDE]
-            return true
-        }
-        
-        // [START_EXCLUDE silent]
-        // Show the deep link that the app was called with.
-        if #available(iOS 8.0, *) {
-            parseAndShowShop(url: url)
-        } else {
-            // Fallback on earlier versions
-        }
-        // [END_EXCLUDE]
-        return false
-    }
+    
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        let dynamicLink = FIRDynamicLinks.dynamicLinks()?.dynamicLink(fromCustomSchemeURL: url)
+//        let handle: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+//        return handle;
+//        if let dynamicLink = dynamicLink {
+//            // Handle the deep link. For example, show the deep-linked content or
+//            // apply a promotional offer to the user's account.
+//            // [START_EXCLUDE]
+//            // In this sample, we just open an alert.
+//            //            let message = generateDynamicLinkMessage(dynamicLink)
+//            if #available(iOS 8.0, *) {
+//                parseAndShowShop(url: dynamicLink.url)
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//            // [END_EXCLUDE]
+//            return true
+//        }
+//        
+//        // [START_EXCLUDE silent]
+//        // Show the deep link that the app was called with.
+//        if #available(iOS 8.0, *) {
+//            parseAndShowShop(url: url)
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        // [END_EXCLUDE]
+//        
+//        
+//        // Add any custom logic here.
+//        return false
+//        
+//    }
     // [END openurl]
     
     // [START continueuseractivity]
