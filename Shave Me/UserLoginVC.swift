@@ -81,38 +81,6 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
         emailTextField.delegate = self
         passwordTextField.delegate = self;
         
-        //if FBSDKAccessToken.current() == nil {
-            let loginButton = FBSDKLoginButton();
-            loginButton.readPermissions = ["public_profile", "email"];
-            //loginButton.center = CGPoint(x: 0, y: socialView.frame.width / 2);
-            loginButton.frame = CGRect(x: 0, y: 0, width: socialView.frame.width, height: socialView.frame.height / 2);
-            loginButton.delegate = self;
-            self.socialView.addSubview(loginButton)
-        //}
-        
-        
-        // twitter Login Button
-        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
-            if (session != nil) {
-                print("signed in as \(session?.userName ?? "ME" )");
-                
-                if let us = session?.userName{
-                    self.createOrLoginTwitterAccount(username: us);
-                }
-                
-                
-            } else {
-                print("error: \(error?.localizedDescription ?? "ME" )");
-            }
-        })
-        //logInButton.center = self.view.center
-        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height / 2 ) + 20, width: socialView.frame.width, height: socialView.frame.height / 2);
-//        logInButton.delegate = self;
-        
-        //logInButton.setTitle("OURS", for: .normal);
-        
-        self.socialView.addSubview(logInButton)
-        
         
         
         
@@ -139,6 +107,43 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
         if let navigationController = self.navigationController, AppController.sharedInstance.loggedInUser != nil {
             navigationController.popViewController(animated: animated)
         }
+        
+        //self.socialView.layoutIfNeeded();
+        
+        //if FBSDKAccessToken.current() == nil {
+        let loginButton = FBSDKLoginButton();
+        loginButton.readPermissions = ["public_profile", "email"];
+        //loginButton.center = CGPoint(x: 0, y: socialView.frame.width / 2);
+        loginButton.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 40, height: 40);
+        //loginButton.frame = socialView.frame;
+        loginButton.delegate = self;
+        self.socialView.addSubview(loginButton)
+        //}
+        
+        
+        // twitter Login Button
+        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if (session != nil) {
+                print("signed in as \(session?.userName ?? "ME" )");
+                
+                if let us = session?.userName{
+                    self.createOrLoginTwitterAccount(username: us);
+                }
+                
+                
+            } else {
+                print("error: \(error?.localizedDescription ?? "ME" )");
+            }
+        })
+        //logInButton.center = self.view.center
+        logInButton.frame = CGRect(x: 0, y: 60, width: self.view.frame.width - 40, height: 40);
+        //        logInButton.delegate = self;
+        
+        //logInButton.setTitle("OURS", for: .normal);
+        
+        self.socialView.addSubview(logInButton)
+        
+        //self.socialView.layoutSubviews();
     }
     
     // MARK: - Click and Callback Methods

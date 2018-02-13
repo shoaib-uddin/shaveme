@@ -21,14 +21,20 @@ class HelpVC: MirroringViewController {
     @IBOutlet weak var videoView: UIView!
     
     
+    
     var avPlayer: AVPlayer!;
     var avPlayerLayer: AVPlayerLayer!
     
     // MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
+        let appDelegate =  AppDelegate.getAppDelegate();
+        appDelegate.shouldRotate = true;
+        
         imageSlideShow.circular = false
         
         let selectedImages = AppController.sharedInstance.language == "en" ? INTRO_SCREENS_EN : INTRO_SCREENS_AR
@@ -67,7 +73,14 @@ class HelpVC: MirroringViewController {
     @IBAction func xVideo(_ sender: UIButton) {
         avPlayer.pause();
         avPlayer = nil;
+        let appDelegate =  AppDelegate.getAppDelegate();
+        appDelegate.shouldRotate = false;
+        self.viewWillLayoutSubviews();
+        self.supportedInterfaceOrientations = UIInterfaceOrientationMask.portrait;
         self.videoView.removeFromSuperview();
+        
+        
+        
     }
     
     
@@ -75,7 +88,14 @@ class HelpVC: MirroringViewController {
         super.viewWillLayoutSubviews()
         
         // Layout subviews manually
-        avPlayerLayer.frame = view.bounds
+        avPlayerLayer.frame = view.frame;
+        
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft
+            || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight{
+            avPlayerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height );
+        }
+        
+        
         
         
         
@@ -95,7 +115,7 @@ class HelpVC: MirroringViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: true);
         avPlayerLayer.frame = videoView.bounds;
-        avPlayerLayer.transform = CATransform3DMakeRotation(CGFloat(90.0 / 180.0 * .pi), 0.0, 0.0, 1.0);
+        //avPlayerLayer.transform = CATransform3DMakeRotation(CGFloat(90.0 / 180.0 * .pi), 0.0, 0.0, 1.0);
         avPlayer.play() // Start the playback
     }
     
@@ -110,5 +130,10 @@ class HelpVC: MirroringViewController {
     @IBAction func onClickDoneSkip(_ sender: Any) {
         MyUserDefaults.getDefaults().set(false, forKey: MyUserDefaults.PREFS_SHOW_HELP)
         _ = self.navigationController?.popViewController(animated: false)
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get { return UIInterfaceOrientationMask.landscape }
+        set { UIInterfaceOrientationMask.landscape }
     }
 }
