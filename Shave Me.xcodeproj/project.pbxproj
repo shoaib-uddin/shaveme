@@ -11,6 +11,7 @@
 		0A31207B202F3149000AEFF3 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */; };
 		0A31207F202F4349000AEFF3 /* GBHFacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */; };
 		4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */; };
+		6358FE942032E67200C0FCE7 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6358FE932032E67200C0FCE7 /* video.mp4 */; };
 		6809B7D61E3DC3F1004768A8 /* ManageBarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */; };
 		6809B7D81E3DD0D0004768A8 /* ManageBarberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */; };
 		6809B7DC1E3E0A6A004768A8 /* AddEditStylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7DA1E3E0A6A004768A8 /* AddEditStylistViewController.swift */; };
@@ -182,6 +183,7 @@
 		0A312078202F0B9A000AEFF3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
 		0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHFacebookHelper.swift; sourceTree = "<group>"; };
+		6358FE932032E67200C0FCE7 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberVC.swift; sourceTree = "<group>"; };
 		6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberModel.swift; sourceTree = "<group>"; };
 		6809B7DA1E3E0A6A004768A8 /* AddEditStylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditStylistViewController.swift; sourceTree = "<group>"; };
@@ -377,6 +379,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6358FE922032E64F00C0FCE7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6358FE932032E67200C0FCE7 /* video.mp4 */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6809B7D41E3DC3C2004768A8 /* ManageBarber */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,6 +755,7 @@
 		68DCBB1F1DF6CE0C004F9800 /* Shave Me */ = {
 			isa = PBXGroup;
 			children = (
+				6358FE922032E64F00C0FCE7 /* Supporting Files */,
 				68D9251A1E2CDA5C0069735F /* Fonts */,
 				686E8C8C1E276475004F6057 /* Shave Me.entitlements */,
 				6836EE5E1E111F8C00C41BDF /* CustomViews */,
@@ -993,6 +1004,7 @@
 				68BFC0D51E1CD87100C2E564 /* UserRegisterationVC.xib in Resources */,
 				68D925291E2CDA750069735F /* GE_SS_Two_Bold.otf in Resources */,
 				68D925441E2F7F5E0069735F /* LongTermDisableBarberVC.xib in Resources */,
+				6358FE942032E67200C0FCE7 /* video.mp4 in Resources */,
 				68709C691E2505FC00027D4A /* MapSearchVC.xib in Resources */,
 				687770A21E40741A007135F1 /* BarberCalendarAppointmentTVCell.xib in Resources */,
 				68D925561E30CCAB0069735F /* ReportResultVC.xib in Resources */,

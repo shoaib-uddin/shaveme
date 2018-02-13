@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpVC" customModule="Shave_Me" customModuleProvider="target">
             <connections>
                 <outlet property="doneSkipButton" destination="t2Z-bd-LIi" id="7Ju-Bb-SYo"/>
                 <outlet property="imageSlideShow" destination="zPg-J2-OLK" id="6ig-TA-3SI"/>
+                <outlet property="videoView" destination="HTe-xU-Pej" id="Oyx-35-ZA3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </view>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2Z-bd-LIi" userLabel="doneButton">
-                    <rect key="frame" x="267" y="609" width="80" height="30"/>
+                    <rect key="frame" x="259" y="617" width="80" height="30"/>
                     <color key="backgroundColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="77e-SP-OT7"/>
@@ -40,14 +46,42 @@
                         <action selector="onClickDoneSkip:" destination="-1" eventType="touchUpInside" id="pRU-yT-ifp"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-xU-Pej">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-fM-jXY">
+                            <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="YJy-ip-oQk"/>
+                                <constraint firstAttribute="width" constant="50" id="lwq-QQ-fYs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <state key="normal" title="X">
+                                <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="xVideo:" destination="-1" eventType="touchUpInside" id="bIT-hI-FPr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="H6Q-fM-jXY" firstAttribute="top" secondItem="HTe-xU-Pej" secondAttribute="top" id="AGJ-c1-lTh"/>
+                        <constraint firstAttribute="trailing" secondItem="H6Q-fM-jXY" secondAttribute="trailing" id="kM7-kB-0XM"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="zPg-J2-OLK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="67z-Hv-Cmo"/>
+                <constraint firstItem="HTe-xU-Pej" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9hx-UM-39J"/>
+                <constraint firstItem="HTe-xU-Pej" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="DYY-HD-eJu"/>
                 <constraint firstAttribute="bottom" secondItem="zPg-J2-OLK" secondAttribute="bottom" id="Lho-Kt-wgb"/>
                 <constraint firstItem="zPg-J2-OLK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PzK-lG-gar"/>
                 <constraint firstAttribute="trailing" secondItem="zPg-J2-OLK" secondAttribute="trailing" id="VkG-bR-BTf"/>
                 <constraint firstAttribute="trailingMargin" secondItem="t2Z-bd-LIi" secondAttribute="trailing" constant="20" id="bnQ-Yh-233"/>
+                <constraint firstItem="HTe-xU-Pej" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="jKm-No-few"/>
+                <constraint firstItem="HTe-xU-Pej" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="upv-9l-Px4"/>
                 <constraint firstAttribute="bottomMargin" secondItem="t2Z-bd-LIi" secondAttribute="bottom" constant="20" id="vet-cX-3UL"/>
             </constraints>
         </view>

@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import AVFoundation
 
 class HelpVC: MirroringViewController {
 
@@ -16,6 +17,12 @@ class HelpVC: MirroringViewController {
     
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     @IBOutlet weak var doneSkipButton: UIButton!
+    
+    @IBOutlet weak var videoView: UIView!
+    
+    
+    var avPlayer: AVPlayer!;
+    var avPlayerLayer: AVPlayerLayer!
     
     // MARK: - Life Cycle Methods
     
@@ -40,12 +47,56 @@ class HelpVC: MirroringViewController {
                 self.doneSkipButton.isHidden = false
             }
         }
+        
+        // An AVPlayerLayer is a CALayer instance to which the AVPlayer can
+        // direct its visual output. Without it, the user will see nothing.
+        avPlayer = AVPlayer();
+        avPlayerLayer = AVPlayerLayer(player: avPlayer);
+        
+        
+        self.videoView.layer.insertSublayer(avPlayerLayer, at: 0)
+        
+        let path = Bundle.main.path(forResource: "video", ofType: "mp4");
+        //let url = NSURL(string: path!);
+        let playerItem = AVPlayerItem.init(url: URL(fileURLWithPath: path!));
+        avPlayer.replaceCurrentItem(with: playerItem);
+        
+        
     }
+    
+    @IBAction func xVideo(_ sender: UIButton) {
+        avPlayer.pause();
+        avPlayer = nil;
+        self.videoView.removeFromSuperview();
+    }
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        // Layout subviews manually
+        avPlayerLayer.frame = view.bounds
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    // Force the view into landscape mode (which is how most video media is consumed.)
+//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+//        return UIInterfaceOrientationMask.landscape
+//    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true);
+        avPlayerLayer.frame = videoView.bounds;
+        avPlayerLayer.transform = CATransform3DMakeRotation(CGFloat(90.0 / 180.0 * .pi), 0.0, 0.0, 1.0);
+        avPlayer.play() // Start the playback
     }
     
     override func viewWillDisappear(_ animated: Bool) {
