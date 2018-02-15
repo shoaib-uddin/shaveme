@@ -375,6 +375,26 @@
             </objects>
             <point key="canvasLocation" x="1944.375" y="137.5"/>
         </scene>
+        <!--PlayerVC-->
+        <scene sceneID="M1V-Gs-Lvn">
+            <objects>
+                <viewController restorationIdentifier="AVPlayerVC" storyboardIdentifier="AVPlayerVC" id="iZm-Qx-hGG" customClass="AVPlayerVC" customModule="Shave_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yWV-gX-bdw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vxh-S9-2t8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tnp-be-Rdx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6FN-8e-Fks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944" y="876"/>
+        </scene>
         <!--managestylist-->
         <scene sceneID="Xu9-XC-ZMK">
             <objects>

@@ -10,6 +10,7 @@
 		0A312079202F0B9A000AEFF3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A312078202F0B9A000AEFF3 /* SafariServices.framework */; };
 		0A31207B202F3149000AEFF3 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */; };
 		0A31207F202F4349000AEFF3 /* GBHFacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */; };
+		0A3E87A620353F3D002A4748 /* AVPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E87A520353F3D002A4748 /* AVPlayerVC.swift */; };
 		4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */; };
 		6358FE942032E67200C0FCE7 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6358FE932032E67200C0FCE7 /* video.mp4 */; };
 		6809B7D61E3DC3F1004768A8 /* ManageBarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */; };
@@ -183,6 +184,7 @@
 		0A312078202F0B9A000AEFF3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
 		0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHFacebookHelper.swift; sourceTree = "<group>"; };
+		0A3E87A520353F3D002A4748 /* AVPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerVC.swift; sourceTree = "<group>"; };
 		6358FE932032E67200C0FCE7 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberVC.swift; sourceTree = "<group>"; };
 		6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberModel.swift; sourceTree = "<group>"; };
@@ -791,6 +793,7 @@
 				6810ACD41DFEBCA200644EA3 /* SideMenuVC.swift */,
 				68EBBDCA1E0BB7900035C472 /* ReviewListVC.swift */,
 				68BFC0C91E1B795000C2E564 /* TermsAndConditionsVC.swift */,
+				0A3E87A520353F3D002A4748 /* AVPlayerVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1232,6 +1235,7 @@
 				6836EE641E122DA700C41BDF /* StylistDetailVC.swift in Sources */,
 				68DAAB3B1E0950D700E6E2ED /* SearchListings.swift in Sources */,
 				68D925481E3088D90069735F /* ReportVC.swift in Sources */,
+				0A3E87A620353F3D002A4748 /* AVPlayerVC.swift in Sources */,
 				68BB0DEE1E065F8B00ED2310 /* BarberHomeVC.swift in Sources */,
 				68DCBB461DF6EE6F004F9800 /* RequestResult.swift in Sources */,
 				68D9253A1E2E4A360069735F /* ImmediateBarberDisableVC.swift in Sources */,
