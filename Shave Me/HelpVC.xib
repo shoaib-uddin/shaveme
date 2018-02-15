@@ -50,11 +50,10 @@
                     <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-fM-jXY">
-                            <rect key="frame" x="315" y="607" width="60" height="60"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <rect key="frame" x="325" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="YJy-ip-oQk"/>
-                                <constraint firstAttribute="width" constant="60" id="lwq-QQ-fYs"/>
+                                <constraint firstAttribute="height" constant="50" id="YJy-ip-oQk"/>
+                                <constraint firstAttribute="width" constant="50" id="lwq-QQ-fYs"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="X">
@@ -67,7 +66,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="H6Q-fM-jXY" secondAttribute="bottom" id="BST-Uc-JAu"/>
+                        <constraint firstItem="H6Q-fM-jXY" firstAttribute="top" secondItem="HTe-xU-Pej" secondAttribute="top" id="AGJ-c1-lTh"/>
                         <constraint firstAttribute="trailing" secondItem="H6Q-fM-jXY" secondAttribute="trailing" id="kM7-kB-0XM"/>
                     </constraints>
                 </view>
