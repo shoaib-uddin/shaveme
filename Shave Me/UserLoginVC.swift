@@ -81,6 +81,7 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
         emailTextField.delegate = self
         passwordTextField.delegate = self;
         
+        self.view.layoutIfNeeded();
         self.socialView.layoutIfNeeded();
         
         //if FBSDKAccessToken.current() == nil {
@@ -108,7 +109,7 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
             }
         })
         //logInButton.center = self.view.center
-        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height / 2 ) + 20, width: UIScreen.main.bounds.width - 40, height: socialView.frame.height / 2);
+        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height ) + 8, width: socialView.frame.width, height: socialView.frame.height);
 //        logInButton.delegate = self;
         
         //logInButton.setTitle("OURS", for: .normal);

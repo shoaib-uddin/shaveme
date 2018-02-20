@@ -48,10 +48,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zPg-J2-OLK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="67z-Hv-Cmo"/>
-                <constraint firstAttribute="bottom" secondItem="zPg-J2-OLK" secondAttribute="bottom" id="Lho-Kt-wgb"/>
-                <constraint firstItem="zPg-J2-OLK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PzK-lG-gar"/>
-                <constraint firstAttribute="trailing" secondItem="zPg-J2-OLK" secondAttribute="trailing" id="VkG-bR-BTf"/>
+                <constraint firstItem="zPg-J2-OLK" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="9HA-uW-plW"/>
+                <constraint firstItem="zPg-J2-OLK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="FcG-M2-nwG"/>
+                <constraint firstItem="zPg-J2-OLK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ma1-IH-GTZ"/>
+                <constraint firstItem="zPg-J2-OLK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qi2-9B-aig"/>
                 <constraint firstAttribute="trailingMargin" secondItem="t2Z-bd-LIi" secondAttribute="trailing" constant="20" id="bnQ-Yh-233"/>
                 <constraint firstAttribute="bottomMargin" secondItem="t2Z-bd-LIi" secondAttribute="bottom" constant="20" id="vet-cX-3UL"/>
             </constraints>

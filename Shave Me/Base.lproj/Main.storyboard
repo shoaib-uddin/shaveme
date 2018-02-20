@@ -1526,22 +1526,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-d2-fWB">
                                         <rect key="frame" x="0.0" y="86" width="288" height="35"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNi-v9-wfz">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNi-v9-wfz">
                                                 <rect key="frame" x="182" y="0.0" width="106" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="QsS-bl-pa4"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="bVQ-hh-Z47"/>
                                                 </constraints>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="forgetPassword">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.31372549020000001" green="0.91372549020000005" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="forgetPassword">
+                                                    <color key="titleColor" red="0.31372549020000001" green="0.91372549020000005" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="onClickForgotPassword:" destination="p2m-dR-hqU" eventType="touchUpInside" id="pdF-r6-khw"/>
@@ -2017,7 +2010,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-zi-778" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTt-Gy-hRj" userLabel="ShowAllShops">
                                 <rect key="frame" x="16" y="79" width="138" height="30"/>
@@ -2195,24 +2188,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dT0-zi-778" firstAttribute="leading" secondItem="rUj-aj-Hcg" secondAttribute="leading" id="2AI-gr-uf6"/>
+                            <constraint firstItem="dT0-zi-778" firstAttribute="centerY" secondItem="rUj-aj-Hcg" secondAttribute="centerY" id="8pz-so-qZq"/>
                             <constraint firstItem="dbB-CX-CJD" firstAttribute="leading" secondItem="rUj-aj-Hcg" secondAttribute="leading" id="9af-mf-zrQ"/>
-                            <constraint firstItem="eTM-mb-GgD" firstAttribute="top" secondItem="dT0-zi-778" secondAttribute="bottom" id="Cwo-Fz-biQ"/>
                             <constraint firstItem="HTt-Gy-hRj" firstAttribute="top" secondItem="82g-vi-xCd" secondAttribute="bottom" constant="15" id="DTv-V4-jO0"/>
-                            <constraint firstAttribute="trailing" secondItem="dT0-zi-778" secondAttribute="trailing" id="KVz-p1-rUs"/>
                             <constraint firstItem="eTM-mb-GgD" firstAttribute="top" secondItem="dbB-CX-CJD" secondAttribute="bottom" id="NKc-kT-cA4"/>
                             <constraint firstItem="z0D-oH-izg" firstAttribute="height" secondItem="HTt-Gy-hRj" secondAttribute="height" id="OYU-Ig-56m"/>
                             <constraint firstItem="HTt-Gy-hRj" firstAttribute="leading" secondItem="rUj-aj-Hcg" secondAttribute="leadingMargin" id="S8Y-ne-Ktu"/>
                             <constraint firstItem="dbB-CX-CJD" firstAttribute="top" secondItem="82g-vi-xCd" secondAttribute="bottom" id="WFo-rm-eOg"/>
                             <constraint firstItem="bTC-PA-WaS" firstAttribute="top" secondItem="0BQ-qE-8Si" secondAttribute="bottom" constant="8" id="YWz-3d-3Hc"/>
                             <constraint firstAttribute="trailing" secondItem="dbB-CX-CJD" secondAttribute="trailing" id="awN-xH-WmJ"/>
-                            <constraint firstItem="dT0-zi-778" firstAttribute="top" secondItem="82g-vi-xCd" secondAttribute="bottom" id="jHR-am-0tC"/>
+                            <constraint firstItem="dT0-zi-778" firstAttribute="width" secondItem="rUj-aj-Hcg" secondAttribute="width" id="cBK-fd-DHK"/>
+                            <constraint firstItem="dT0-zi-778" firstAttribute="centerX" secondItem="rUj-aj-Hcg" secondAttribute="centerX" id="cjd-H3-tf0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z0D-oH-izg" secondAttribute="trailing" id="kqy-7e-Y7w"/>
                             <constraint firstItem="HTt-Gy-hRj" firstAttribute="width" secondItem="rUj-aj-Hcg" secondAttribute="width" multiplier="0.43" id="muK-cN-Uiz"/>
                             <constraint firstItem="z0D-oH-izg" firstAttribute="top" secondItem="HTt-Gy-hRj" secondAttribute="top" id="q5R-5j-lRv"/>
                             <constraint firstItem="0BQ-qE-8Si" firstAttribute="leading" secondItem="rUj-aj-Hcg" secondAttribute="leadingMargin" id="q7e-fe-gLB"/>
                             <constraint firstItem="bTC-PA-WaS" firstAttribute="trailing" secondItem="0BQ-qE-8Si" secondAttribute="trailing" id="qlq-ie-r3T"/>
                             <constraint firstItem="0BQ-qE-8Si" firstAttribute="top" secondItem="HTt-Gy-hRj" secondAttribute="bottom" constant="8" id="rJx-39-j3a"/>
+                            <constraint firstItem="dT0-zi-778" firstAttribute="height" secondItem="rUj-aj-Hcg" secondAttribute="height" id="sSF-na-wNU"/>
                             <constraint firstItem="z0D-oH-izg" firstAttribute="width" secondItem="HTt-Gy-hRj" secondAttribute="width" id="w8T-Gd-poF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0BQ-qE-8Si" secondAttribute="trailing" id="zXW-3j-JV5"/>
                         </constraints>
@@ -2789,7 +2782,7 @@
                                                             <state key="normal" title="reservehere"/>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.57647058819999997" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="AwR-m9-tNy" secondAttribute="bottom" id="27Y-jj-mNG"/>
                                                         <constraint firstAttribute="height" constant="40" id="8vc-02-iHt"/>

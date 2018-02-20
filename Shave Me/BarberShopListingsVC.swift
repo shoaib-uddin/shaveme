@@ -151,8 +151,8 @@ class BarberShopListingsVC: BaseSideMenuViewController, UITableViewDataSource, U
         cell.titleLabel.text = model.shopName.uppercased()
         cell.numberOfReviewsButton.setTitle(String(model.reviewCount) + " " + "reviews".localized(), for: .normal)
         
-        cell.distanceLabel.textColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL47d9bf()
-        cell.bottomView.backgroundColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL47d9bf()
+        cell.distanceLabel.textColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL_GOLDEN()
+        cell.bottomView.backgroundColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL_GOLDEN()
         cell.featuredView.isHidden = !model.isFeatured
         cell.distanceLabel.isHidden = model.distance <= 0
         cell.distanceLabel.text = String(model.distance) + " " + "distanceRangeText".localized()
