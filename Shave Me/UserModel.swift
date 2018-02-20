@@ -18,7 +18,6 @@ class UserModel: Mappable {
     var email = ""
     var language = ""
     var nationality = ""
-    var emirates = ""
     var profilePic: String?
     var sendAlerts: Bool?
     var displayPic: Bool?
@@ -32,14 +31,13 @@ class UserModel: Mappable {
     init() {
     }
     
-    init(firstName: String, lastName: String, password: String, gender: String, email: String, language: String, nationality: String, emirates: String, profilePic: String?) {
+    init(firstName: String, lastName: String, password: String, email: String, language: String, nationality: String, profilePic: String?) {
         self.firstName = firstName
         self.lastName = lastName
         self.password = password
         self.email = email
         self.language = language
         self.nationality = nationality
-        self.emirates = emirates
         self.profilePic = profilePic
         
         self.displayPic = true
@@ -56,7 +54,6 @@ class UserModel: Mappable {
         email <- map["email"]
         language <- map["language"]
         nationality <- map["nationality"]
-        emirates <- map["emirates"]
         profilePic <- map["profilePic"]
         sendAlerts <- map["sendAlerts"]
         displayPic <- map["displayPic"]

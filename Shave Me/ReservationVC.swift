@@ -75,6 +75,26 @@ class ReservationVC: BaseSideMenuViewController, ViewControllerInterationProtoco
         if removeYourself {
             _ = self.navigationController?.popViewController(animated: false)
         }
+        
+        makeRequest();
+        
+    }
+    
+    func makeRequest() {
+        guard let userID = AppController.sharedInstance.loggedInUser?.id else {
+            
+            //AppUtils.showLoginMessage(viewController: self, storyboard: UIStoryboard(name: "Main", bundle: nil), handler: nil)
+            AppUtils.showLoginMessage(viewController: self, storyboard: UIStoryboard(name: "Main", bundle: nil), handler: { (action) in
+                
+                if(action.title!.lowercased() == "cancel"){
+                    self.navigationController?.popViewController(animated: true);
+                }
+                
+            })
+            
+            return
+        }
+        
     }
     
     // MARK: - Collection view delegate methods

@@ -11,6 +11,7 @@
 		0A31207B202F3149000AEFF3 /* FacebookLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */; };
 		0A31207F202F4349000AEFF3 /* GBHFacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */; };
 		0A3E87A620353F3D002A4748 /* AVPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E87A520353F3D002A4748 /* AVPlayerVC.swift */; };
+		0A3E87AA203550A1002A4748 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3E87A9203550A1002A4748 /* AVFoundation.framework */; };
 		4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */; };
 		6358FE942032E67200C0FCE7 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6358FE932032E67200C0FCE7 /* video.mp4 */; };
 		6809B7D61E3DC3F1004768A8 /* ManageBarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */; };
@@ -185,6 +186,7 @@
 		0A31207A202F3149000AEFF3 /* FacebookLoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginHelper.swift; sourceTree = "<group>"; };
 		0A31207E202F4349000AEFF3 /* GBHFacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHFacebookHelper.swift; sourceTree = "<group>"; };
 		0A3E87A520353F3D002A4748 /* AVPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerVC.swift; sourceTree = "<group>"; };
+		0A3E87A9203550A1002A4748 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6358FE932032E67200C0FCE7 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		6809B7D51E3DC3F1004768A8 /* ManageBarberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberVC.swift; sourceTree = "<group>"; };
 		6809B7D71E3DD0D0004768A8 /* ManageBarberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageBarberModel.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3E87AA203550A1002A4748 /* AVFoundation.framework in Frameworks */,
 				0A312079202F0B9A000AEFF3 /* SafariServices.framework in Frameworks */,
 				687770B51E4C9756007135F1 /* SystemConfiguration.framework in Frameworks */,
 				4CA28BAFFB4B95A2117E511D /* Pods_Shave_Me.framework in Frameworks */,
@@ -892,6 +895,7 @@
 		78E484FA57F65C680F43887A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A3E87A9203550A1002A4748 /* AVFoundation.framework */,
 				0A312078202F0B9A000AEFF3 /* SafariServices.framework */,
 				687770B41E4C9756007135F1 /* SystemConfiguration.framework */,
 				6F2DA5E17E6B662C407C7678 /* Pods_Shave_Me.framework */,
@@ -1480,6 +1484,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Shave Me/Shave Me.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P89N5UC95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Shave Me/Info.plist";
@@ -1501,6 +1506,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Shave Me/Shave Me.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P89N5UC95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Shave Me/Info.plist";

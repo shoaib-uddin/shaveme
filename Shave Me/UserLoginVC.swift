@@ -81,11 +81,13 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
         emailTextField.delegate = self
         passwordTextField.delegate = self;
         
+        self.socialView.layoutIfNeeded();
+        
         //if FBSDKAccessToken.current() == nil {
             let loginButton = FBSDKLoginButton();
             loginButton.readPermissions = ["public_profile", "email"];
             //loginButton.center = CGPoint(x: 0, y: socialView.frame.width / 2);
-            loginButton.frame = CGRect(x: 0, y: 0, width: socialView.frame.width, height: socialView.frame.height / 2);
+            loginButton.frame = CGRect(x: 0, y: 0, width: socialView.frame.width, height: socialView.frame.height);
             loginButton.delegate = self;
             self.socialView.addSubview(loginButton)
         //}
@@ -106,7 +108,7 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
             }
         })
         //logInButton.center = self.view.center
-        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height / 2 ) + 20, width: socialView.frame.width, height: socialView.frame.height / 2);
+        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height / 2 ) + 20, width: UIScreen.main.bounds.width - 40, height: socialView.frame.height / 2);
 //        logInButton.delegate = self;
         
         //logInButton.setTitle("OURS", for: .normal);
@@ -123,11 +125,10 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
         let firstName = username;
         let lastName = "";
         let password = "shaveme@17";
-        let gender = "Male";
         let email = "\(username)@twitter.com";
         let profilePic = "";
         
-        let u = UserModel(firstName: firstName, lastName: lastName, password: password, gender: gender, email: email, language: "EN", nationality: "", emirates: "", profilePic: profilePic)
+        let u = UserModel(firstName: firstName, lastName: lastName, password: password, email: email, language: "EN", nationality: "", profilePic: profilePic)
         self.tempUserModel = u;
         _ = NetworkManager.postRegisteration(model: u, completionHandler: self.onRegResponse);
         

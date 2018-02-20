@@ -20,9 +20,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var mobileTextField: UITextField!
-    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var nationalityLabel: UILabel!
-    @IBOutlet weak var emiratesLabel: UILabel!
     @IBOutlet weak var termsAndConditionsContainer: UIView!
     @IBOutlet weak var termsAndConditionsCheckbox: M13Checkbox!
     @IBOutlet weak var termsOfServiceLabel: UILabel!
@@ -42,7 +40,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
         self.automaticallyAdjustsScrollViewInsets = false
         self.title = "myprofile".localized()
         // Mapping all the click callbacks
-        AppUtils.setGestureRecognizers(senders: profileImageView, updateButton, genderLabel, nationalityLabel, emiratesLabel, termsAndConditionsContainer, termsOfServiceLabel, target: self, action: #selector(UserRegisterationVC.onClickCallback(_:)))
+        AppUtils.setGestureRecognizers(senders: profileImageView, updateButton, nationalityLabel, termsAndConditionsContainer, termsOfServiceLabel, target: self, action: #selector(UserRegisterationVC.onClickCallback(_:)))
         // Loading view
         if let user = AppController.sharedInstance.loggedInUser {
             firstNameTextField.text = user.firstName
@@ -52,7 +50,6 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
             
             
             nationalityLabel.text = user.nationality
-            emiratesLabel.text = user.emirates
             
             if let profileURL = user.profilePic, let url = URL(string: profileURL) {
                 profileImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "nouserpic"))
@@ -132,10 +129,6 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
         switch sender.view! {
         case self.profileImageView:
             onClickPickImage()
-        case self.genderLabel:
-            onClickGenderDropdown()
-        case self.emiratesLabel:
-            onClickEmirateDropdown()
         case self.nationalityLabel:
             onClickNationalityDropdown()
         case self.termsAndConditionsContainer:
@@ -180,7 +173,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
             return
         }
         
-        guard let gender = self.genderLabel.text, let nationality = self.nationalityLabel.text, let emirate = self.emiratesLabel.text, let firstName = firstNameTextField.text, firstName.characters.count > 0, let lastName = lastNameTextField.text, lastName.characters.count > 0 else {
+        guard let nationality = self.nationalityLabel.text, let firstName = firstNameTextField.text, firstName.characters.count > 0, let lastName = lastNameTextField.text, lastName.characters.count > 0 else {
             AppUtils.showMessage(title: "alert".localized(), message: "checkEmptyField".localized(), buttonTitle: "okay".localized(), viewController: self, handler: nil)
             return
         }
@@ -194,9 +187,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
             userModel.firstName = firstName
             userModel.lastName = lastName
             userModel.mobileNo = mobileTextField.text
-            
             userModel.nationality = nationality
-            userModel.emirates = emirate
             userModel.profilePic = profilePictureBase64String
             userModel.language = AppController.sharedInstance.language
             userModel.sendAlerts = loggedInUser.sendAlerts
@@ -207,33 +198,7 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
         }
     }
     
-    func onClickGenderDropdown() {
-        self.dismissKeyboard()
-        
-        if genderPicker == nil {
-            let rows = "GenderArray".localizedArray()
-            var initialSelection = 0
-            if let selectedText = genderLabel.text, let selectedIndex = rows.index(of: selectedText) {
-                initialSelection = selectedIndex
-            }
-            genderPicker = ActionSheetStringPicker(title: "gender".localized(), rows: rows, initialSelection: initialSelection, doneBlock: onGenderItemSelected, cancel: { ActionStringCancelBlock in return }, origin: self.genderLabel)
-        }
-        genderPicker?.show()
-    }
     
-    func onClickEmirateDropdown() {
-        self.dismissKeyboard()
-        
-        if emiratePicker == nil {
-            let rows = "EmiratesArray".localizedArray()
-            var initialSelection = 0
-            if let selectedText = emiratesLabel.text, let selectedIndex = rows.index(of: selectedText) {
-                initialSelection = selectedIndex
-            }
-            emiratePicker = ActionSheetStringPicker(title: "emirates".localized(), rows: rows, initialSelection: initialSelection, doneBlock: onEmirateItemSelected, cancel: { ActionStringCancelBlock in return }, origin: self.emiratesLabel)
-        }
-        emiratePicker?.show()
-    }
     
     func onClickNationalityDropdown() {
         self.dismissKeyboard()
@@ -249,16 +214,8 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
         nationalityPicker?.show()
     }
     
-    func onGenderItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
-        self.genderLabel.text = selectedValue as? String
-    }
-    
     func onNationalityItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
         self.nationalityLabel.text = selectedValue as? String
-    }
-    
-    func onEmirateItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
-        self.emiratesLabel.text = selectedValue as? String
     }
 
     // MARK: - Utility Methods

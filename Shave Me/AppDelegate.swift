@@ -26,6 +26,7 @@ import TwitterKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var shouldRotate = false;
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -192,5 +193,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         // With swizzling disabled you must set the APNs token here.
         // FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.sandbox)
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if shouldRotate {
+            return .allButUpsideDown
+        }
+        else {
+            return .portrait
+        }
+    }
+    
+    class func getAppDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate ;
     }
 }

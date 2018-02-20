@@ -37,7 +37,11 @@ class MyAppointmentsVC: BaseSideMenuViewController, FSCalendarDelegate, FSCalend
         
         self.tableView.register(UINib(nibName: "CalendarAppointmentCell", bundle: nil), forCellReuseIdentifier: "CalendarAppointmentReusableCell")
         
-        makeRequest()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        makeRequest();
     }
     
     override func viewWillLayoutSubviews() {

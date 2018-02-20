@@ -41,7 +41,7 @@ class AVPlayerVC: UIViewController {
         super.viewWillAppear(animated)
         
         avPlayerLayer.frame = view.bounds;
-        //avPlayerLayer.transform = CATransform3DMakeRotation(CGFloat(90.0 / 180.0 * .pi), 0.0, 0.0, 1.0);
+        self.navigationController?.setNavigationBarHidden(true, animated: true);
         avPlayer.play() // Start the playback
     }
     
@@ -51,7 +51,7 @@ class AVPlayerVC: UIViewController {
         let appDelegate =  AppDelegate.getAppDelegate();
         appDelegate.shouldRotate = false;
         self.viewWillLayoutSubviews();
-        self.supportedInterfaceOrientations = UIInterfaceOrientationMask.portrait;
+        //self.supportedInterfaceOrientations = UIInterfaceOrientationMask.portrait;
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
             self.dismiss(animated: false, completion: {
                 // nil
@@ -75,9 +75,15 @@ class AVPlayerVC: UIViewController {
         
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        get { return UIInterfaceOrientationMask.landscape }
-        set { UIInterfaceOrientationMask.landscape }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+//        get { return UIInterfaceOrientationMask.landscape | UIInterfaceOrientationMask.portrait  }
+//        set { UIInterfaceOrientationMask.landscape | UIInterfaceOrientationMask.portrait }
+//    }
     
 }

@@ -60,11 +60,10 @@ class GBHFacebookHelper {
                     let firstName = dataArray["first_name"] as! String;
                     let lastName = dataArray["last_name"] as! String;
                     let password = "shaveme@17";
-                    let gender = dataArray["gender"] as! String;
                     let email = dataArray["email"] as! String;
                     let profilePic = dataArray["picture"]!["url"] as? String;
                     
-                    let u = UserModel(firstName: firstName, lastName: lastName, password: password, gender: gender, email: email, language: "EN", nationality: "", emirates: "", profilePic: profilePic)
+                    let u = UserModel(firstName: firstName, lastName: lastName, password: password, email: email, language: "EN", nationality: "", profilePic: profilePic)
                     
                     completion(true, u);
                     

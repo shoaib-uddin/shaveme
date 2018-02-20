@@ -31,7 +31,7 @@ class UpcomingAppointmentsVC: MirroringViewController, UITableViewDataSource, UI
         
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero);
         self.titleLabel.text = "upcoming_appionment".localized()
         
         if let user = AppController.sharedInstance.loggedInUser {

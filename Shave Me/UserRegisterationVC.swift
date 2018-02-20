@@ -26,9 +26,7 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
     @IBOutlet weak var mobileTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var nationalityLabel: UILabel!
-    @IBOutlet weak var emiratesLabel: UILabel!
     @IBOutlet weak var termsAndConditionsContainer: UIView!
     @IBOutlet weak var termsAndConditionsCheckbox: M13Checkbox!
     @IBOutlet weak var termsOfServiceLabel: UILabel!
@@ -52,7 +50,7 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
         self.title = "registration".localized()
         
         // Mapping all the click callbacks
-        AppUtils.setGestureRecognizers(senders: profileImageView, loginButton, genderLabel, nationalityLabel, emiratesLabel, termsAndConditionsContainer, registerButton, termsOfServiceLabel, target: self, action: #selector(UserRegisterationVC.onClickCallback(_:)))
+        AppUtils.setGestureRecognizers(senders: profileImageView, loginButton, nationalityLabel, termsAndConditionsContainer, registerButton, termsOfServiceLabel, target: self, action: #selector(UserRegisterationVC.onClickCallback(_:)))
         
         self.hideKeyboardOnTap()
         self.firstNameTextField.delegate = self
@@ -153,10 +151,6 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
             onClickPickImage()
         case self.loginButton:
             onClickLogin()
-        case self.genderLabel:
-            onClickGenderDropdown()
-        case self.emiratesLabel:
-            onClickEmirateDropdown()
         case self.nationalityLabel:
             onClickNationalityDropdown()
         case self.termsAndConditionsContainer:
@@ -205,7 +199,7 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
             return
         }
         
-        guard let gender = selectedGenderValue, let nationality = selectedNationalityValue, let emirate = selectedEmirateValue, let firstName = firstNameTextField.text, firstName.characters.count > 0, let lastName = lastNameTextField.text, lastName.characters.count > 0, let password = passwordTextField.text, password.characters.count > 0, let email = emailTextField.text, email.characters.count > 0 else {
+        guard let nationality = selectedNationalityValue, let firstName = firstNameTextField.text, firstName.characters.count > 0, let lastName = lastNameTextField.text, lastName.characters.count > 0, let password = passwordTextField.text, password.characters.count > 0, let email = emailTextField.text, email.characters.count > 0 else {
             AppUtils.showMessage(title: "alert".localized(), message: "checkEmptyField".localized(), buttonTitle: "okay".localized(), viewController: self, handler: nil)
             return
         }
@@ -213,7 +207,7 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
         self.showProgressHUD()
         
         let language = AppController.sharedInstance.language
-        let userModel = UserModel(firstName: firstName, lastName: lastName, password: password, gender: gender, email: email, language: language, nationality: nationality, emirates: emirate, profilePic: profilePictureBase64String)
+        let userModel = UserModel(firstName: firstName, lastName: lastName, password: password, email: email, language: language, nationality: nationality, profilePic: profilePictureBase64String)
         userModel.mobileNo = mobileTextField.text
         _ = NetworkManager.postRegisteration(model: userModel, completionHandler: onResponse)
     }
@@ -225,21 +219,9 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func onClickGenderDropdown() {
-        if genderPicker == nil {
-            let rows = "GenderArray".localizedArray()
-            genderPicker = ActionSheetStringPicker(title: "gender".localized(), rows: rows, initialSelection: 0, doneBlock: onGenderItemSelected, cancel: { ActionStringCancelBlock in return }, origin: self.genderLabel)
-        }
-        genderPicker?.show()
-    }
     
-    func onClickEmirateDropdown() {
-        if emiratePicker == nil {
-            let rows = "EmiratesArray".localizedArray()
-            emiratePicker = ActionSheetStringPicker(title: "emirates".localized(), rows: rows, initialSelection: 0, doneBlock: onEmirateItemSelected, cancel: { ActionStringCancelBlock in return }, origin: self.emiratesLabel)
-        }
-        emiratePicker?.show()
-    }
+    
+    
 
     func onClickNationalityDropdown() {
         if nationalityPicker == nil {
@@ -249,19 +231,9 @@ class UserRegisterationVC: BaseSideMenuViewController, ViewControllerInterationP
         nationalityPicker?.show()
     }
     
-    func onGenderItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
-        selectedGenderValue = selectedValue as? String
-        self.genderLabel.text = selectedValue as? String
-    }
-    
     func onNationalityItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
         selectedNationalityValue = selectedValue as? String
         self.nationalityLabel.text = selectedValue as? String
-    }
-    
-    func onEmirateItemSelected(picker: ActionSheetStringPicker?, selectedIndex: Int, selectedValue: Any?) {
-        selectedEmirateValue = selectedValue as? String
-        self.emiratesLabel.text = selectedValue as? String
     }
 
     // MARK: - Utility Methods
