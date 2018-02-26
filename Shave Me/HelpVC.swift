@@ -30,6 +30,7 @@ class HelpVC: MirroringViewController {
         imageSlideShow.setImageInputs(imageSources)
         
         imageSlideShow.contentScaleMode = .scaleAspectFill
+        imageSlideShow.center = self.view.center;
         
         doneSkipButton.isHidden = !MyUserDefaults.getShowHelpScreen()
         
@@ -44,7 +45,7 @@ class HelpVC: MirroringViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main);
         let destination = storyboard.instantiateViewController(withIdentifier: "AVPlayerVC") as! AVPlayerVC
-        self.navigationController?.present(destination, animated: false, completion: nil);
+        self.navigationController?.present(destination, animated: false, completion: nil);		
         
         
         
