@@ -1858,6 +1858,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Appointments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-Yq-niV" userLabel="title">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="KKa-Nq-W3L"/>
                                         </constraints>
@@ -1874,7 +1875,7 @@
                                     </view>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz2-bd-NxV">
                                         <rect key="frame" x="0.0" y="48" width="298" height="228"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="72" id="MMO-B0-ld0" customClass="UpcomingAppointmentCell" customModule="Shave_Me" customModuleProvider="target">
@@ -1935,34 +1936,43 @@
                                         </connections>
                                     </tableView>
                                     <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jxR-v9-bIE">
-                                        <rect key="frame" x="139" y="128" width="20" height="20"/>
+                                        <rect key="frame" x="139" y="74" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-cW-Qaa" userLabel="StatusLabel">
-                                        <rect key="frame" x="20" y="44" width="258" height="212"/>
+                                        <rect key="frame" x="0.0" y="44" width="298" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="SXa-Ag-6Gy"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bmf-ke-kEG" secondAttribute="trailing" id="0uV-6V-3z0"/>
                                     <constraint firstItem="jxR-v9-bIE" firstAttribute="centerX" secondItem="wxI-OE-Tlp" secondAttribute="centerX" id="3gj-d6-zLD"/>
-                                    <constraint firstAttribute="bottom" secondItem="Trg-cW-Qaa" secondAttribute="bottom" constant="20" id="G4g-4a-bkV"/>
                                     <constraint firstItem="Zyi-Yq-niV" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="KFp-m9-0vE"/>
                                     <constraint firstItem="bmf-ke-kEG" firstAttribute="top" secondItem="Zyi-Yq-niV" secondAttribute="bottom" constant="8" id="RCe-JY-UFe"/>
                                     <constraint firstItem="bmf-ke-kEG" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="SgK-zt-dpD"/>
                                     <constraint firstItem="Kz2-bd-NxV" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="Wpu-eu-iFV"/>
                                     <constraint firstItem="Zyi-Yq-niV" firstAttribute="top" secondItem="wxI-OE-Tlp" secondAttribute="top" id="X6m-Vq-TYS"/>
-                                    <constraint firstAttribute="trailing" secondItem="Trg-cW-Qaa" secondAttribute="trailing" constant="20" id="bzG-b8-b9G"/>
+                                    <constraint firstAttribute="trailing" secondItem="Trg-cW-Qaa" secondAttribute="trailing" id="bzG-b8-b9G"/>
                                     <constraint firstItem="Trg-cW-Qaa" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" id="fQd-fe-iYS"/>
-                                    <constraint firstItem="jxR-v9-bIE" firstAttribute="centerY" secondItem="wxI-OE-Tlp" secondAttribute="centerY" id="fVy-kJ-Qz2"/>
                                     <constraint firstItem="Kz2-bd-NxV" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" constant="4" id="hO9-Bx-eRK"/>
                                     <constraint firstAttribute="trailing" secondItem="Kz2-bd-NxV" secondAttribute="trailing" id="kVe-Yj-IvY"/>
                                     <constraint firstAttribute="bottom" secondItem="Kz2-bd-NxV" secondAttribute="bottom" id="nSW-2I-iOa"/>
                                     <constraint firstAttribute="trailing" secondItem="Zyi-Yq-niV" secondAttribute="trailing" id="qv3-XM-YJG"/>
-                                    <constraint firstItem="Trg-cW-Qaa" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" constant="20" id="y2o-ya-6YP"/>
+                                    <constraint firstItem="jxR-v9-bIE" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" constant="30" id="xQu-4M-MAK"/>
+                                    <constraint firstItem="Trg-cW-Qaa" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="y2o-ya-6YP"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoCollapse" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2G-j6-8ou" userLabel="CrossButton">
                                 <rect key="frame" x="284" y="5" width="35" height="35"/>
@@ -1976,6 +1986,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wxI-OE-Tlp" firstAttribute="leading" secondItem="SC1-an-rip" secondAttribute="leadingMargin" constant="-10" id="GlW-M1-9ax"/>
                             <constraint firstItem="tC6-h3-VB7" firstAttribute="top" secondItem="wxI-OE-Tlp" secondAttribute="bottom" constant="4" id="KTB-nu-k4I"/>

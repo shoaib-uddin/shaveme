@@ -29,7 +29,7 @@ class HelpVC: MirroringViewController {
         let imageSources = selectedImages.map { return ImageSource(image: $0) }
         imageSlideShow.setImageInputs(imageSources)
         
-        imageSlideShow.contentScaleMode = .scaleAspectFill
+        imageSlideShow.contentScaleMode = .scaleAspectFit
         imageSlideShow.center = self.view.center;
         
         doneSkipButton.isHidden = !MyUserDefaults.getShowHelpScreen()

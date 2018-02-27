@@ -27,7 +27,7 @@ class UpcomingAppointmentsVC: MirroringViewController, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contentView.applyBorder()
+        //contentView.applyBorder()
         
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableViewAutomaticDimension

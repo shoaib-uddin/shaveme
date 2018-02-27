@@ -163,7 +163,7 @@ class UserHomeVC: BaseSideMenuViewController, ViewControllerInterationProtocol, 
         let controller = self.storyboard!.instantiateViewController(withIdentifier: UpcomingAppointmentsVC.storyBoardID) as! UpcomingAppointmentsVC
         controller.delegate = self
         let formSheetController = MZFormSheetPresentationViewController(contentViewController: controller)
-        formSheetController.presentationController?.contentViewSize = CGSize(width: screenWidth * 0.9, height: screenHeight * 0.5)
+        formSheetController.presentationController?.contentViewSize = CGSize(width: screenWidth * 0.9, height: screenHeight * 0.5);
         formSheetController.interactivePanGestureDismissalDirection = MZFormSheetPanGestureDismissDirection.all
         self.present(formSheetController, animated: true, completion: nil)
         
