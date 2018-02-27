@@ -64,6 +64,7 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var socialView: UIView!
+    @IBOutlet weak var socialView2: UIView!
     var tempUserModel: UserModel!;
     
     // MARK: - Life Cycle Methods
@@ -109,12 +110,12 @@ class UserLoginVC: BaseSideMenuViewController, UITextFieldDelegate, FBSDKLoginBu
             }
         })
         //logInButton.center = self.view.center
-        logInButton.frame = CGRect(x: 0, y: ( socialView.frame.height ) + 8, width: socialView.frame.width, height: socialView.frame.height);
+        logInButton.frame = CGRect(x: 0, y: 0, width: socialView2.frame.width, height: socialView2.frame.height);
 //        logInButton.delegate = self;
         
         //logInButton.setTitle("OURS", for: .normal);
         
-        self.socialView.addSubview(logInButton)
+        self.socialView2.addSubview(logInButton)
         
         
         

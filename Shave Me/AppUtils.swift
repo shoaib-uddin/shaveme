@@ -169,7 +169,7 @@ public final class AppUtils {
     static func getImageFromPhotoLibrary(viewController: UIViewController) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
-        imagePickerController.allowsEditing = true
+        imagePickerController.allowsEditing = false
         if let viewController = viewController as? (UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
             imagePickerController.delegate = viewController
         } else {

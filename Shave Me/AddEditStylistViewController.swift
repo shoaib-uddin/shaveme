@@ -133,8 +133,9 @@ class AddEditStylistViewController: BaseSideMenuViewController, UIImagePickerCon
         }
         
         if let image = image {
-            let scaledImage = image.resizeImage(newWidth: 1200)
-            self.pictureBase64String = scaledImage?.base64EncodedString()
+            //let scaledImage = image.resizeImage(newWidth: 1200)
+            let scaledImage = image.resizeToSquare();
+            self.pictureBase64String = scaledImage.base64EncodedString()
             
             self.mImageView.image = scaledImage
         } else {

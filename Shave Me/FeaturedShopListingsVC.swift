@@ -129,6 +129,11 @@ class FeaturedShopListingsVC: BaseSideMenuViewController, UITableViewDataSource,
         
         let url = URL(string: searchModelController!.featuredListings.baseUrl + model.imageName)!
         cell.backgroundImageView.af_setImage(withURL: url, placeholderImage: AppController.sharedInstance.placeHolderImage)
+        cell.distanceLabel.textColor = UIColor.COL_GOLDEN();
+        cell.bottomView.backgroundColor = UIColor.COL_GOLDEN();
+        cell.backgroundColor = UIColor.COL_GOLDEN();
+        
+        
         
         cell.shopAddressLabel.text = model.barberShopAddress
         cell.titleLabel.text = model.barberShopName.uppercased()

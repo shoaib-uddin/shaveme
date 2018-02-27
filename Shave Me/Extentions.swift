@@ -168,6 +168,57 @@ extension UIImage {
         return newImage
     }
     
+    func resizeToSquare() -> UIImage {
+        // inspired by Hamptin Catlin
+        // https://gist.github.com/licvido/55d12a8eb76a8103c753
+        
+        let newScale = self.scale // change this if you want the output image to have a different scale
+        let originalSize = self.size
+        
+        var targetSize = CGSize(width: 1200, height: 1200);
+        let w = self.size.width;
+        let h = self.size.height;
+        if(w > h){
+            targetSize = CGSize(width: h, height: h);
+        }else
+            if(w < h){
+                targetSize = CGSize(width: w, height: w);
+            }else{
+                targetSize = CGSize(width: w, height: h);
+        }
+        
+        
+        
+        
+        
+        
+        let widthRatio = targetSize.width / originalSize.width
+        let heightRatio = targetSize.height / originalSize.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        let newSize: CGSize
+        if widthRatio > heightRatio {
+            newSize = CGSize(width: floor(originalSize.width * heightRatio), height: floor(originalSize.height * heightRatio))
+        } else {
+            newSize = CGSize(width: floor(originalSize.width * widthRatio), height: floor(originalSize.height * widthRatio))
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(origin: .zero, size: targetSize)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = newScale
+        format.opaque = true
+        let newImage = UIGraphicsImageRenderer(bounds: rect, format: format).image() { _ in
+            self.draw(in: rect)
+        }
+        
+        return newImage
+    }
+    
+    
+    
     func scaleImage(toSize newSize: CGSize) -> UIImage? {
         let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0)

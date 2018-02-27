@@ -55,7 +55,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dle-HA-B9I" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                                     <subviews>
-                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nouserpic" translatesAutoresizingMaskIntoConstraints="NO" id="MF5-bw-Pzg">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nouserpic" translatesAutoresizingMaskIntoConstraints="NO" id="MF5-bw-Pzg">
                                             <rect key="frame" x="122" y="10" width="132" height="132"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="MF5-bw-Pzg" secondAttribute="height" multiplier="1:1" id="th3-Fk-kdw"/>

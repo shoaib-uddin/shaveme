@@ -50,7 +50,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-vb-jDl" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="462"/>
                                     <subviews>
-                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nouserpic" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-l4-6y5">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nouserpic" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-l4-6y5">
                                             <rect key="frame" x="122" y="10" width="132" height="132"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="UTt-l4-6y5" secondAttribute="height" multiplier="1:1" id="wyh-aW-rxC"/>

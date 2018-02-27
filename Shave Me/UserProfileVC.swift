@@ -116,8 +116,9 @@ class UserProfileVC: BaseSideMenuViewController, UIImagePickerControllerDelegate
         }
         
         if let image = image {
-            let scaledImage = image.resizeImage(newWidth: 600)
-            self.profilePictureBase64String = scaledImage?.base64EncodedString()
+            //let scaledImage = image.resizeImage(newWidth: 600);
+            let scaledImage = image.resizeToSquare();
+            self.profilePictureBase64String = scaledImage.base64EncodedString()
             
             self.profileImageView.image = scaledImage
         } else {

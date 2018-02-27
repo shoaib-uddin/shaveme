@@ -156,7 +156,7 @@ class BarberShopListingsVC: BaseSideMenuViewController, UITableViewDataSource, U
         cell.featuredView.isHidden = !model.isFeatured
         cell.distanceLabel.isHidden = model.distance <= 0
         cell.distanceLabel.text = String(model.distance) + " " + "distanceRangeText".localized()
-        
+        cell.layoutIfNeeded();
         cell.ratingsView.value = CGFloat(model.rating)
         
         if DBFavorite.isFavourite(barberId: model.barberShopId!) {
