@@ -1867,14 +1867,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmf-ke-kEG" userLabel="HorizontalLine">
-                                        <rect key="frame" x="0.0" y="43" width="298" height="1"/>
+                                        <rect key="frame" x="0.0" y="35" width="298" height="4"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="ZTB-cX-Tlh"/>
+                                            <constraint firstAttribute="height" constant="4" id="ZTB-cX-Tlh"/>
                                         </constraints>
                                     </view>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz2-bd-NxV">
-                                        <rect key="frame" x="0.0" y="48" width="298" height="228"/>
+                                        <rect key="frame" x="0.0" y="39" width="298" height="237"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -1936,10 +1936,11 @@
                                         </connections>
                                     </tableView>
                                     <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jxR-v9-bIE">
-                                        <rect key="frame" x="139" y="74" width="20" height="20"/>
+                                        <rect key="frame" x="139" y="69" width="20" height="20"/>
+                                        <color key="color" red="0.2784313725" green="0.85098039219999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </activityIndicatorView>
                                     <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-cW-Qaa" userLabel="StatusLabel">
-                                        <rect key="frame" x="0.0" y="44" width="298" height="80"/>
+                                        <rect key="frame" x="0.0" y="39" width="298" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="SXa-Ag-6Gy"/>
@@ -1954,13 +1955,13 @@
                                     <constraint firstAttribute="trailing" secondItem="bmf-ke-kEG" secondAttribute="trailing" id="0uV-6V-3z0"/>
                                     <constraint firstItem="jxR-v9-bIE" firstAttribute="centerX" secondItem="wxI-OE-Tlp" secondAttribute="centerX" id="3gj-d6-zLD"/>
                                     <constraint firstItem="Zyi-Yq-niV" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="KFp-m9-0vE"/>
-                                    <constraint firstItem="bmf-ke-kEG" firstAttribute="top" secondItem="Zyi-Yq-niV" secondAttribute="bottom" constant="8" id="RCe-JY-UFe"/>
+                                    <constraint firstItem="bmf-ke-kEG" firstAttribute="top" secondItem="Zyi-Yq-niV" secondAttribute="bottom" id="RCe-JY-UFe"/>
                                     <constraint firstItem="bmf-ke-kEG" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="SgK-zt-dpD"/>
                                     <constraint firstItem="Kz2-bd-NxV" firstAttribute="leading" secondItem="wxI-OE-Tlp" secondAttribute="leading" id="Wpu-eu-iFV"/>
                                     <constraint firstItem="Zyi-Yq-niV" firstAttribute="top" secondItem="wxI-OE-Tlp" secondAttribute="top" id="X6m-Vq-TYS"/>
                                     <constraint firstAttribute="trailing" secondItem="Trg-cW-Qaa" secondAttribute="trailing" id="bzG-b8-b9G"/>
                                     <constraint firstItem="Trg-cW-Qaa" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" id="fQd-fe-iYS"/>
-                                    <constraint firstItem="Kz2-bd-NxV" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" constant="4" id="hO9-Bx-eRK"/>
+                                    <constraint firstItem="Kz2-bd-NxV" firstAttribute="top" secondItem="bmf-ke-kEG" secondAttribute="bottom" id="hO9-Bx-eRK"/>
                                     <constraint firstAttribute="trailing" secondItem="Kz2-bd-NxV" secondAttribute="trailing" id="kVe-Yj-IvY"/>
                                     <constraint firstAttribute="bottom" secondItem="Kz2-bd-NxV" secondAttribute="bottom" id="nSW-2I-iOa"/>
                                     <constraint firstAttribute="trailing" secondItem="Zyi-Yq-niV" secondAttribute="trailing" id="qv3-XM-YJG"/>

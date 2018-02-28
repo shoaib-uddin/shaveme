@@ -92,7 +92,13 @@ class BarberShopListingsVC: BaseSideMenuViewController, UITableViewDataSource, U
                 if let searchModelController = self.searchModelController {
                     searchModelController.add(newSearchListings: newSearchListing)
                 } else {
-                    searchModelController = SearchModelController()
+                    searchModelController = SearchModelController();
+                    
+                    var shops = newSearchListing.Shop?.sorted(by: { (a, b) -> Bool in
+                        return a.isFeatured && !b.isFeatured
+                    })
+                    
+                    newSearchListing.Shop = shops;
                     searchModelController?.searchListings = newSearchListing
                 }
                 
@@ -151,8 +157,8 @@ class BarberShopListingsVC: BaseSideMenuViewController, UITableViewDataSource, U
         cell.titleLabel.text = model.shopName.uppercased()
         cell.numberOfReviewsButton.setTitle(String(model.reviewCount) + " " + "reviews".localized(), for: .normal)
         
-        cell.distanceLabel.textColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL_GOLDEN()
-        cell.bottomView.backgroundColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL_GOLDEN()
+        cell.distanceLabel.textColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL47d9bf()
+        cell.bottomView.backgroundColor = model.isFeatured ? UIColor.COL_GOLDEN() : UIColor.COL47d9bf()
         cell.featuredView.isHidden = !model.isFeatured
         cell.distanceLabel.isHidden = model.distance <= 0
         cell.distanceLabel.text = String(model.distance) + " " + "distanceRangeText".localized()

@@ -146,7 +146,7 @@ class NetworkManager {
             "ln": AppController.sharedInstance.language,
             "uId": String(userID),
             "f" : "n",
-            "ps" : "10",
+            "ps" : "100",
             "la" : String(latitude),
             "lo" : String(longitude),
             "sn" : query
@@ -182,7 +182,7 @@ class NetworkManager {
         var parameters = [
             "pi": String(pageIndex),
             "ln": AppController.sharedInstance.language,
-            "ps" : "10",
+            "ps" : "100",
             "uId": String(userID),
             "s" : searchModel.SERVICEIDS,
             "f" : searchModel.FACILITISID,
