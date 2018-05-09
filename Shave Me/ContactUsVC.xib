@@ -37,10 +37,10 @@
                     <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0T-qQ-Nx4" userLabel="MainContentView">
-                    <rect key="frame" x="0.0" y="36" width="375" height="631"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84g-zb-ZGv">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="631"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYd-eD-Edw" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="491"/>
@@ -334,7 +334,7 @@
                 <constraint firstItem="T0T-qQ-Nx4" firstAttribute="leading" secondItem="act-gh-jKp" secondAttribute="leading" id="GmJ-lf-knj"/>
                 <constraint firstAttribute="bottom" secondItem="T0T-qQ-Nx4" secondAttribute="bottom" id="HSY-hW-mfV"/>
                 <constraint firstAttribute="trailing" secondItem="T0T-qQ-Nx4" secondAttribute="trailing" id="NGp-2h-57z"/>
-                <constraint firstItem="T0T-qQ-Nx4" firstAttribute="top" secondItem="act-gh-jKp" secondAttribute="topMargin" constant="16" id="Wwr-hm-OTA"/>
+                <constraint firstItem="T0T-qQ-Nx4" firstAttribute="top" secondItem="act-gh-jKp" secondAttribute="topMargin" id="Wwr-hm-OTA"/>
                 <constraint firstItem="hAa-7A-mpa" firstAttribute="height" secondItem="act-gh-jKp" secondAttribute="height" id="fdX-rf-wyX"/>
                 <constraint firstItem="hAa-7A-mpa" firstAttribute="centerY" secondItem="act-gh-jKp" secondAttribute="centerY" id="pAW-qT-gNH"/>
             </constraints>
